@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <script type="text/javascript" src="./jquery.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="./mystyle.css">
+
+        <title>Chengchao Shen's Homepage</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- --------------- Introduction --------------- -->
+            <table class="intro">
+                <tbody>
+                    <tr>
+                        <td width=20%>
+                            <p style="text-align:center"><font face="Arial"><img src="./images/avatar.png" width=180px></font></p>
+                        </td>
+                        <td width=50%>
+                            <font face="Arial" style="font-size: 20pt;"><b>Chengchao Shen <span lang="zh-cn">沈成超</span></b></font>
+                            <br><br>
+                            <font face="Arial" style="font-size: 12pt;">Zhejiang University</font>
+                            <br><br><br><br><br><br>
+                        </td>
+                        <td width=30%>
+                            <p style="text-align:right"><a src="./index_cn.html"><font style="font-size: 18pt;">[中文版]</font></a></p>
+                            <div class="tocright"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+                                <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none">
+                                <div class="toctitle" lang="en" dir="ltr">
+                                    <!-- <h2 id="mw-toc-heading">Contents</h2> -->
+                                    <div id="mw-toc-heading"><b>Contents</b></div>
+                                    <span class="toctogglespan"
+                                        <label class="toctogglelabel" for="toctogglecheckbox"></label>
+                                    </span>
+                                </div>
+                                <ul>
+                                    <li class="toclevel-1 tocsection-1"><a href="#interest"><span class="tocnumber">1.</span> <span class="toctext">Research Interest</span></a></li>
+                                    <li class="toclevel-1 tocsection-2"><a href="#publications"><span class="tocnumber">2.</span> <span class="toctext">Publications</span></a></li>
+                                    <li class="toclevel-1 tocsection-3"><a href="#services"><span class="tocnumber">3.</span> <span class="toctext">Academic Services</span></a></li>
+                                </ul>
+                            </div>
+                            <br><br><br><br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- ------------ Research Interest ------------ -->
+            <div class="instest" id="interest">
+                <h3 class="title">Research Interest</h3>
+                <p>Currently my research interests include: The Interpretation of Deep Learning; 
+                    Knowledge Computation; Zero/One/Few-shot Learning; Transfer Learning; Object Detection
+                </p>
+            </div>
+
+            <!-- --------------- Publications --------------- -->
+            <div class="publications" id="publications">
+                <!-- <br> -->
+                <!-- <div class="title">Publications</div> -->
+                <h3 class="title">Publications</h3>
+
+                <div class="publication">
+                    <dl class="description">
+                        <div class="figure"><img src="images/shen2021training.png"></img></div>
+                        <dt class="ptitle">Training Generative Adversarial Networks in One Stage</dt>
+                        <dd><b class='me'>Chengchao Shen</b>, Youtan Yin, Xinchao Wang, Xubin Li, Jie Song, Mingli Song</dd>
+                        <dd>The IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>, <b>CCF A</b>), 2021</dd>
+                        <dd>
+                            [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Shen_Training_Generative_Adversarial_Networks_in_One_Stage_CVPR_2021_paper.pdf" target="_blank">paper</a>]
+                            [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Shen_Training_Generative_Adversarial_CVPR_2021_supplemental.pdf" target="_blank">supp</a>]
+                            [<a href="http://arxiv.org/abs/2103.00430" target="_blank">arXiv</a>]
+                            [<a href="https://github.com/zju-vipa/OSGAN" target="_blank">code</a>]
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                                <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
+@inproceedings{shen2021training,
+author    = {Shen, Chengchao and Yin, Youtan and Wang, Xinchao and Li, Xubin and Song, Jie and Song, Mingli},
+title     = {Training Generative Adversarial Networks in One Stage},
+booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+month     = {June},
+year      = {2021},
+pages     = {3350-3360}
+}
+                                </div>
+                            </div>  
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                                <div class="abstract"  style="overflow: hidden; display: none;">  
+                                    <p>Generative Adversarial Networks (GANs) have demonstrated unprecedented success in various image generation tasks. The encouraging results, however, come at the price of a cumbersome training process, during which the generator and discriminator are alternately updated in two stages. In this paper, we investigate a general training scheme that enables training GANs efficiently in only one stage. Based on the adversarial losses of the generator and discriminator, we categorize GANs into two classes, Symmetric GANs and Asymmetric GANs, and introduce a novel gradient decomposition method to unify the two, allowing us to train both classes in one stage and hence alleviate the training effort. We also computationally analyze the efficiency of the proposed method, and empirically demonstrate that, the proposed method yields a solid 1.5× acceleration across various datasets and network architectures. Furthermore, we show that the proposed method is readily applicable to other adversarial-training scenarios, such as data-free knowledge distillation. </p>
+                                </div>
+                            </div>       
+                        </dd>
+                        
+                    </dl>
+                </div>
+
+                <div class="publication">
+                    <dl class="description">
+                        <div class="figure"><img src="images/shen2021progressive.png"></img></div>
+                        <dt class="ptitle">Progressive Network Grafting for Few-Shot Knowledge Distillation</dt>
+                        <dd><b class='me'>Chengchao Shen</b>, Xinchao Wang, Youtan Yin, Jie Song, Sihui Luo, Mingli Song</dd>
+                        <dd>AAAI Conference on Artificial Intelligence (<b>AAAI</b>, <b>CCF A</b>), 2021</dd>
+                        <dd>
+                            [<a href="https://ojs.aaai.org/index.php/AAAI/article/view/16356/16163" target="_blank">paper</a>]
+                            [<a href="https://arxiv.org/abs/2012.04915" target="_blank">arXiv</a>]
+                            [<a href="https://github.com/zju-vipa/NetGraft" target="_blank">code</a>]
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                                <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
+@inproceedings{shen2021progressive,
+    title={Progressive Network Grafting for Few-Shot Knowledge Distillation},
+    author={Shen, Chengchao and Wang, Xinchao and Yin, Youtan and Song, Jie and Luo, Sihui and Song, Mingli},
+    booktitle = {AAAI Conference on Artificial Intelligence (AAAI)},
+    url={https://ojs.aaai.org/index.php/AAAI/article/view/16356},  
+    year={2021},
+    month={May}, 
+    volume={35}, 
+    pages={2541-2549} 
+}
+                                </div>
+                            </div>  
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                                <div class="abstract"  style="overflow: hidden; display: none;">  
+                                    <p>Knowledge distillation has demonstrated encouraging performances in deep model compression. Most existing approaches, however, require massive labeled data to accomplish the knowledge transfer, making the model compression a cumbersome and costly process. In this paper, we investigate the practical few-shot knowledge distillation scenario, where we assume only a few samples without human annotations are available for each category. To this end, we introduce a principled dual-stage distillation scheme tailored for few-shot data. In the first step, we graft the student blocks one by one onto the teacher, and learn the parameters of the grafted block intertwined with those of the other teacher blocks. In the second step, the trained student blocks are progressively connected and then together grafted onto the teacher network, allowing the learned student blocks to adapt themselves to each other and eventually replace the teacher network. Experiments demonstrate that our approach, with only a few unlabeled samples, achieves gratifying results on CIFAR10, CIFAR100, and ILSVRC-2012. On CIFAR10 and CIFAR100, our performances are even on par with those of knowledge distillation schemes that utilize the full datasets.</p>
+                                </div>
+                            </div>       
+                        </dd>
+                        
+                    </dl>
+                </div>
+
+                <div class="publication">
+                    <dl class="description">
+                        <div class="figure"><img src="images/shen2019customizing.png"></img></div>
+                        <dt class="ptitle">Customizing Student Networks From Heterogeneous Teachers via Adaptive Knowledge Amalgamation</dt>
+                        <dd><b class='me'>Chengchao Shen</b>, Mengqi Xue, Xinchao Wang, Jie Song, Li Sun, Mingli Song</dd>
+                        <dd>The IEEE International Conference on Computer Vision (<b>ICCV</b>, <b>CCF A</b>), 2019</dd>
+                        <dd>
+                            [<a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Shen_Customizing_Student_Networks_From_Heterogeneous_Teachers_via_Adaptive_Knowledge_Amalgamation_ICCV_2019_paper.pdf" target="_blank">paper</a>]
+                            [<a href="https://openaccess.thecvf.com/content_ICCV_2019/supplemental/Shen_Customizing_Student_Networks_ICCV_2019_supplemental.pdf" target="_blank">supp</a>]
+                            [<a href="https://arxiv.org/abs/1908.07121" target="_blank">arXiv</a>]
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                                <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
+@inproceedings{shen2019customizing,
+    author    = {Shen, Chengchao and Xue, Mengqi and Wang, Xinchao and Song, Jie and Sun, Li and Song, Mingli},
+    title     = {Customizing student networks from heterogeneous teachers via adaptive knowledge amalgamation},
+    booktitle = {The IEEE International Conference on Computer Vision (ICCV)},
+    month = {October},
+    year      = {2019}
+}
+                                </div>
+                            </div>  
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                                <div class="abstract"  style="overflow: hidden; display: none;">  
+                                    <p>A massive number of well-trained deep networks have been released by developers online. These networks may focus on different tasks and in many cases are optimized for different datasets. In this paper, we study how to exploit such heterogeneous pre-trained networks, known as teachers, so as to train a customized student network that tackles a set of selective tasks defined by the user. We assume no human annotations are available, and each teacher may be either single- or multi-task. To this end, we introduce a dual-step strategy that first extracts the task-specific knowledge from the heterogeneous teachers sharing the same sub-task, and then amalgamates the extracted knowledge to build the student network. To facilitate the training, we employ a selective learning scheme where, for each unlabelled sample, the student learns adaptively from only the teacher with the least prediction ambiguity. We evaluate the proposed approach on several datasets and the experimental results demonstrate that the student, learned by such adaptive knowledge amalgamation, achieves performances even better than those of the teachers.</p>
+                                </div>
+                            </div>       
+                        </dd>
+                        
+                    </dl>
+                </div>
+
+                <div class="publication">
+                    <dl class="description">
+                        <div class="figure"><img src="images/shen2019amalgamating.png"></img></div>
+                        <dt class="ptitle">Amalgamating Knowledge towards Comprehensive Classification</dt>
+                        <dd><b class='me'>Chengchao Shen</b>, Xinchao Wang, Jie Song, Li Sun, Mingli Song</dd>
+                        <dd>AAAI Conference on Artificial Intelligence (<b>AAAI</b>, <b>CCF A</b>), 2019</dd>
+                        <dd>
+                            [<a href="https://aaai.org/ojs/index.php/AAAI/article/view/4165" target="_blank">paper</a>]
+                            [<a href="https://arxiv.org/abs/1811.02796" target="_blank">arXiv</a>]
+                            [<a href="https://github.com/zju-vipa/KamalEngine" target="_blank">code</a>]
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                                <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
+@inproceedings{shen2019amalgamating,
+    author    = {Shen, Chengchao and Wang, Xinchao and Song, Jie and Sun, Li and Song, Mingli},
+    title     = {Amalgamating Knowledge towards Comprehensive Classification},
+    booktitle = {AAAI Conference on Artificial Intelligence (AAAI)},
+    pages     = {3068--3075},
+    year      = {2019}
+}
+                                </div>
+                            </div>  
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                                <div class="abstract"  style="overflow: hidden; display: none;">  
+                                    <p>With the rapid development of deep learning, there have been an unprecedentedly large number of trained deep network models available online. Reusing such trained models can significantly reduce the cost of training the new models from scratch, if not infeasible at all as the annotations used for the training original networks are often unavailable to public. We propose in this paper to study a new model-reusing task, which we term as \emph{knowledge amalgamation}. Given multiple trained teacher networks, each of which specializes in a different classification problem, the goal of knowledge amalgamation is to learn a lightweight student model capable of handling the comprehensive classification. We assume no other annotations except the outputs from the teacher models are available, and thus focus on extracting and amalgamating knowledge from the multiple teachers. To this end, we propose a pilot two-step strategy to tackle the knowledge amalgamation task, by learning first the compact feature representations from teachers and then the network parameters in a layer-wise manner so as to build the student model. We apply this approach to four public datasets and obtain very encouraging results: even without any human annotation, the obtained student model is competent to handle the comprehensive classification task and in most cases outperforms the teachers in individual sub-tasks.</p>
+                                </div>
+                            </div>       
+                        </dd>
+                        
+                    </dl>
+                </div>
+
+                <div class="publication">
+                    <dl class="description">
+                        <div class="figure"><img src="images/shen2018intra.png"></img></div>
+                        <dt class="ptitle">Intra-class Structure Aware Networks for Screen Defect Detection</dt>
+                        <dd><b class='me'>Chengchao Shen</b>, Jie Song, Sihui Luo, Li Sun, Mingli Song</dd>
+                        <dd>International Conference on Neural Information Processing (<b>ICONIP</b>, <b>CCF C</b>), 2018</dd>
+                        <dd>
+                            [<a href="https://link.springer.com/chapter/10.1007/978-3-030-04212-7_42" target="_blank">paper</a>]
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                                <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
+@inproceedings{shen2018intra,
+    title={Intra-class Structure Aware Networks for Screen Defect Detection},
+    author={Shen, Chengchao and Song, Jie and Song, Shuyi and Luo, Sihui and Sun, Li and Song, Mingli},
+    booktitle={International Conference on Neural Information Processing (ICONIP)},
+    pages={476--485},
+    year={2018},
+    organization={Springer}
+}
+                                </div>
+                            </div>  
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                                <div class="abstract"  style="overflow: hidden; display: none;">  
+                                    <p>Typically, screen defect detection treats different types of defects as a single category and ignores the large variation among them, which may pose large difficulty to the model learning and thus lead to inferior performance. In this paper, we propose a novel network model, called Intra-class Structure Aware Networks (ISANs), to alleviate the difficulty of learning one single concept which exhibits in various forms. The proposed model introduces more neural units for the “defect” category rather than a single one, to accommodate the large variations in this category, which can significantly improve the representation power. Regularized by prior distribution of intra-class variants, our approach can learn intra-class structure of screen defect without extra fine-grained labels. Experimental results demonstrate that ISANs can effectively discriminate intra-class variants and gain significant performance improvement on screen defect detection task as well as the classification task in MNIST.</p>
+                                </div>
+                            </div>       
+                        </dd>
+                        
+                    </dl>
+                </div>
+
+                <div class="publication">
+                    <dl class="description">
+                        <div class="figure"><img src="images/song2018selective.png"></img></div>
+                        <dt class="ptitle">Selective Zero-Shot Classification With Augmented Attributes</dt>
+                        <dd>Jie Song, <b class='me'>Chengchao Shen</b>, Jie Lei, An-Xiang Zeng, Kairi Ou, Dacheng Tao, Mingli Song</dd>
+                        <dd>The European Conference on Computer Vision (<b>ECCV</b>, <b>CCF B</b>), 2018</dd>
+                        <dd>
+                            [<a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Jie_Song_Selective_Zero-Shot_Classification_ECCV_2018_paper.pdf" target="_blank">paper</a>]
+                            [<a href="http://arxiv.org/abs/1807.07437v1" target="_blank">arXiv</a>]
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                                <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
+@inproceedings{song2018selective,
+    title={Selective zero-shot classification with augmented attributes},
+    author={Song, Jie and Shen, Chengchao and Lei, Jie and Zeng, An-Xiang and Ou, Kairi and Tao, Dacheng and Song, Mingli},
+    booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+    pages={468--483},
+    year={2018}
+}
+                                </div>
+                            </div>
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                                <div class="abstract"  style="overflow: hidden; display: none;">  
+                                    <p>In this paper, we introduce a selective zero-shot classification problem: how can the classifier avoid making dubious predictions? Existing attribute-based zero-shot classification methods are shown to work poorly in the selective classification scenario. We argue the under-complete human defined attribute vocabulary accounts for the poor performance. We propose a selective zero-shot classifier based on both the human defined and the automatically discovered residual attributes. The proposed classifier is constructed by firstly learning the defined and the residual attributes jointly. Then the predictions are conducted within the subspace of the defined attributes. Finally, the prediction confidence is measured by both the defined and the residual attributes. Experiments conducted on several benchmarks demonstrate that our classifier produces a superior performance to other methods under the risk-coverage trade-off metric.</p>
+                                </div>
+                            </div>       
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="publication">
+                    <dl class="description">
+                        <div class="figure"><img src="images/song2018transductive.png"></img></div>
+                        <dt class="ptitle">Transductive Unbiased Embedding for Zero-Shot Learning</dt>
+                        <dd>Jie Song, <b class='me'>Chengchao Shen</b>, Yezhou Yang, Yang Liu, Mingli Song</dd>
+                        <dd>The IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>, <b>CCF A</b>), 2018</dd>
+                        <dd>
+                            [<a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Song_Transductive_Unbiased_Embedding_CVPR_2018_paper.pdf" target="_blank">paper</a>]
+                            [<a href="http://arxiv.org/abs/1803.11320v1" target="_blank">arXiv</a>]
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                                <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
+@inproceedings{song2018transductive,
+    author = {Song, Jie and Shen, Chengchao and Yang, Yezhou and Liu, Yang and Song, Mingli},
+    title = {Transductive Unbiased Embedding for Zero-Shot Learning},
+    booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month = {June},
+    year = {2018}
+}
+                                </div>
+                            </div>
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                                <div class="abstract"  style="overflow: hidden; display: none;">  
+                                    <p>Most existing Zero-Shot Learning (ZSL) methods have the strong bias problem, in which instances of unseen (target) classes tend to be categorized as one of the seen (source) classes. So they yield poor performance after being deployed in the generalized ZSL settings. In this paper, we propose a straightforward yet effective method named Quasi-Fully Supervised Learning (QFSL) to alleviate the bias problem. Our method follows the way of transductive learning, which assumes that both the labeled source images and unlabeled target images are available for training. In the semantic embedding space, the labeled source images are mapped to several fixed points specified by the source categories, and the unlabeled target images are forced to be mapped to other points specified by the target categories. Experiments conducted on AwA2, CUB and SUN datasets demonstrate that our method outperforms existing state-of-the-art approaches by a huge margin of 9.3~24.5% following generalized ZSL settings, and by a large margin of 0.2~16.2% following conventional ZSL settings.</p>
+                                </div>
+                            </div>       
+                        </dd>
+                    </dl>
+                </div>
+
+
+            </div>
+
+            <!-- ----------------- Services ----------------- -->
+            <!-- <div class="services" id="services">
+                <h3 class="title">Academic Services</h3>
+                <ul>
+                    <li>
+                        <b>Program Committee</b>：
+                        <ul>
+                            <li>The IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2020, 2021</li>
+                            <li>The IEEE International Conference on Computer Vision (ICCV), 2019, 2021</li>
+                            <li>AAAI Conference on Artificial Intelligence (AAAI), 2020, 2021</li>
+                            <li>Advances in Neural Information Processing Systems (NeurIPS), 2021</li>
+                            <li>International Conference on Learning Representations (ICLR), 2022</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+            <div class="services" id="services">
+                <h3 class="title">Academic Services</h3>
+                <b style="font-size: 20px;">Conference Reviewer</b>:
+                <!-- <h4 style="font-size: 20px; padding-top: -10px;">Program Committee: </b> -->
+                <ul>
+                    <li>The IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2020, 2021</li>
+                    <li>The IEEE International Conference on Computer Vision (ICCV), 2019, 2021</li>
+                    <li>AAAI Conference on Artificial Intelligence (AAAI), 2020, 2021</li>
+                    <li>Advances in Neural Information Processing Systems (NeurIPS), 2021</li>
+                    <li>International Conference on Learning Representations (ICLR), 2022</li>
+                </ul>
+            </div>
+
+            <!-- ------------- Awards & Honors ------------- -->
+
+    </div>
+
+        
+    <br>
+    <br>
+    </body>
+
+</html>
