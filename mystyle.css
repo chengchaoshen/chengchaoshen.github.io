@@ -1,8 +1,19 @@
+html {
+    background-color: #eeeeee;
+}
 
 /* -------------------- Page -------------------- */
 .container{
     width: 80%;
     margin: auto;
+    background-color: #ffffff;
+}
+
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 30px;
 }
 
 .intro{
