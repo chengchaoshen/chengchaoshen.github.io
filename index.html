@@ -29,7 +29,7 @@
                             <img src="./images/em.png" height=25px style="vertical-align: bottom;">
 
                             <p>
-                                <b>Research Interest</b>: Interpretation, Zero/one/few-shot Learning, Transfer Learning, Model Compression
+                                <b>Research Interest</b>: Zero/one/few-shot Learning, Transfer Learning, Interpretability, Model Compression
                             </p>
 
                             <p>
@@ -62,14 +62,6 @@
                     </tr>
                 </tbody>
             </table>
-
-            <!-- ------------ Research Interest ------------ -->
-            <!-- <div class="instest" id="interest">
-                <h3 class="title">Research Interest</h3>
-                <p>Currently my research interests include: The Interpretation of Deep Learning; 
-                    Knowledge Computation; Zero/One/Few-shot Learning; Transfer Learning; Object Detection
-                </p>
-            </div> -->
 
             <!-- --------------- Publications --------------- -->
             <div class="publications" id="publications">
@@ -296,6 +288,155 @@
                     </dl>
                 </div>
 
+                <div class="publication">
+                    <dl class="description">
+                        <div class="figure"><img src="images/fang2021contrastive.png"></img></div>
+                        <dt class="ptitle">Contrastive Model Inversion for Data-Free Knowledge Distillation</dt>
+                        <dd>Gongfan Fang, Jie Song, Xinchao Wang, <b class='me'>Chengchao Shen</b>, Xingen Wang, Mingli Song</dd>
+                        <dd>International Joint Conference on Artificial Intelligence (<b>IJCAI</b>, <b>CCF A</b>), 2021</dd>
+                        <dd>
+                            [<a href="https://www.ijcai.org/proceedings/2021/0327.pdf" target="_blank">paper</a>]
+                            [<a href="https://arxiv.org/abs/2105.08584" target="_blank">arXiv</a>]
+                            [<a href="https://github.com/zju-vipa/CMI" target="_blank">code</a>]
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                                <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
+@inproceedings{fang2021contrastive,
+  title={Contrastive Model Inversion for Data-Free Knowledge Distillation},
+  author={Fang, Gongfan and Song, Jie and Wang, Xinchao and Shen, Chengchao and Wang, Xingen and Song, Mingli},
+  booktitle={International Joint Conference on Artificial Intelligence (IJCAI)},
+  year={2021},
+  pages={2374--2380}
+}
+                                </div>
+                            </div>
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                                <div class="abstract"  style="overflow: hidden; display: none;">  
+                                    <p>Model inversion, whose goal is to recover training data from a pre-trained model, has been recently proved feasible. However, existing inversion methods usually suffer from the mode collapse problem, where the synthesized instances are highly similar to each other and thus show limited effectiveness for downstream tasks, such as knowledge distillation. In this paper, we propose Contrastive Model Inversion~(CMI), where the data diversity is explicitly modeled as an optimizable objective, to alleviate the mode collapse issue. Our main observation is that, under the constraint of the same amount of data, higher data diversity usually indicates stronger instance discrimination. To this end, we introduce in CMI a contrastive learning objective that encourages the synthesizing instances to be distinguishable from the already synthesized ones in previous batches. Experiments of pre-trained models on CIFAR-10, CIFAR-100, and Tiny-ImageNet demonstrate that CMI not only generates more visually plausible instances than the state of the arts, but also achieves significantly superior performance when the generated data are used for knowledge distillation.</p>
+                                </div>
+                            </div>       
+                        </dd>
+                    </dl>
+                </div>
+
+
+                <div class="publication">
+                    <dl class="description">
+                        <div class="figure"><img src="images/fang2021mosaicking.png"></img></div>
+                        <dt class="ptitle">Mosaicking to Distill: Knowledge Distillation from Out-of-Domain Data</dt>
+                        <dd>Gongfan Fang, Yifan Bao, Jie Song, Xinchao Wang, Donglin Xie, <b class='me'>Chengchao Shen</b>, Mingli Song</dd>
+                        <dd>Advance in Neural Information Processing Systems (<b>NeurIPS</b>, <b>CCF A</b>), 2021</dd>
+                        <dd>
+                            [<a href="https://papers.nips.cc/paper/2021/file/63dc7ed1010d3c3b8269faf0ba7491d4-Paper.pdf" target="_blank">paper</a>]
+                            [<a href="https://arxiv.org/abs/2110.15094" target="_blank">arXiv</a>]
+                            [<a href="https://papers.nips.cc/paper/2021/file/63dc7ed1010d3c3b8269faf0ba7491d4-Supplemental.pdf" target="_blank">supp</a>]
+                            [<a href="https://github.com/zju-vipa/MosaicKD" target="_blank">code</a>]
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                                <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
+@inproceedings{fang2021mosaicking,
+    title={Mosaicking to Distill: Knowledge Distillation from Out-of-Domain Data},
+    author={Fang, Gongfan and Bao, Yifan and Song, Jie and Wang, Xinchao and Xie, Donglin and Shen, Chengchao and Song, Mingli},
+    booktitle={Advance in Neural Information Processing Systems (NeurIPS)},
+    year={2021}
+}
+                                </div>
+                            </div>
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                                <div class="abstract"  style="overflow: hidden; display: none;">  
+                                    <p>Knowledge distillation (KD) aims to craft a compact student model that imitates the behavior of a pre-trained teacher in a target domain. Prior KD approaches, despite their gratifying results, have largely relied on the premise that in-domain data is available to carry out the knowledge transfer. Such an assumption, unfortunately, in many cases violates the practical setting, since the original training data or even the data domain is often unreachable due to privacy or copyright reasons. In this paper, we attempt to tackle an ambitious task, termed as out-of-domain knowledge distillation (OOD-KD), which allows us to conduct KD using only OOD data that can be readily obtained at a very low cost. Admittedly, OOD-KD is by nature a highly challenging task due to the agnostic domain gap. To this end, we introduce a handy yet surprisingly efficacious approach, dubbed as MosaicKD. The key insight behind MosaicKD lies in that, samples from various domains share common local patterns, even though their global semantic may vary significantly; these shared local patterns, in turn, can be re-assembled analogous to mosaic tiling, to approximate the in-domain data and to further alleviating the domain discrepancy. In MosaicKD, this is achieved through a four-player min-max game, in which a generator, a discriminator, a student network, are collectively trained in an adversarial manner, partially under the guidance of a pre-trained teacher. We validate MosaicKD over classification and semantic segmentation tasks across various benchmarks, and demonstrate that it yields results much superior to the state-of-the-art counterparts on OOD data.</p>
+                                </div>
+                            </div>       
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="publication">
+                    <dl class="description">
+                        <div class="figure"><img src="images/fang2019data.png"></img></div>
+                        <dt class="ptitle">Data-Free Adversarial Distillation</dt>
+                        <dd>Gongfan Fang, Jie Song, <b class='me'>Chengchao Shen</b>, Xinchao Wang, Da Chen, Mingli Song</dd>
+                        <dd>ArXiv:1912.11006, 2019</dd>
+                        <dd>
+                            [<a href="https://arxiv.org/abs/1912.11006" target="_blank">arXiv</a>]
+                            [<a href="https://github.com/VainF/Data-Free-Adversarial-Distillation" target="_blank">code</a>]
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                                <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
+@article{fang2019data,
+    title={Data-free adversarial distillation},
+    author={Fang, Gongfan and Song, Jie and Shen, Chengchao and Wang, Xinchao and Chen, Da and Song, Mingli},
+    journal={arXiv preprint arXiv:1912.11006},
+    year={2019}
+}
+                                </div>
+                            </div>
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                                <div class="abstract"  style="overflow: hidden; display: none;">  
+                                    <p>Knowledge Distillation (KD) has made remarkable progress in the last few years and become a popular paradigm for model compression and knowledge transfer. However, almost all existing KD algorithms are data-driven, i.e., relying on a large amount of original training data or alternative data, which is usually unavailable in real-world scenarios. In this paper, we devote ourselves to this challenging problem and propose a novel adversarial distillation mechanism to craft a compact student model without any real-world data. We introduce a model discrepancy to quantificationally measure the difference between student and teacher models and construct an optimizable upper bound. In our work, the student and the teacher jointly act the role of the discriminator to reduce this discrepancy, when a generator adversarially produces some "hard samples" to enlarge it. Extensive experiments demonstrate that the proposed data-free method yields comparable performance to existing data-driven methods. More strikingly, our approach can be directly extended to semantic segmentation, which is more complicated than classification, and our approach achieves state-of-the-art results.</p>
+                                </div>
+                            </div>       
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="publication">
+                    <dl class="description">
+                        <div class="figure"><img src="images/song2020depara.png"></img></div>
+                        <dt class="ptitle">DEPARA: Deep Attribution Graph for Deep Knowledge Transferability</dt>
+                        <dd>Jie Song, Yixin Chen, Jingwen Ye, Xinchao Wang, <b class='me'>Chengchao Shen</b>, Feng Mao, Mingli Song</dd>
+                        <dd>The IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>, <b>CCF A</b>), 2020</dd>
+                        <dd>
+                            [<a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Song_DEPARA_Deep_Attribution_Graph_for_Deep_Knowledge_Transferability_CVPR_2020_paper.pdf" target="_blank">paper</a>]
+                            [<a href="http://arxiv.org/abs/2003.07496" target="_blank">arXiv</a>]
+                            [<a href="https://openaccess.thecvf.com/content_CVPR_2020/supplemental/Song_DEPARA_Deep_Attribution_CVPR_2020_supplemental.pdf" target="_blank">supp</a>]
+                            [<a href="https://github.com/zju-vipa/DEPARA" target="_blank">code</a>]
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                                <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
+@inproceedings{song2020depara,
+  title={Depara: Deep attribution graph for deep knowledge transferability},
+  author={Song, Jie and Chen, Yixin and Ye, Jingwen and Wang, Xinchao and Shen, Chengchao and Mao, Feng and Song, Mingli},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages={3922--3930},
+  year={2020}
+}
+                                </div>
+                            </div>
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                                <div class="abstract"  style="overflow: hidden; display: none;">  
+                                    <p>Exploring the intrinsic interconnections between the knowledge encoded in PRe-trained Deep Neural Networks (PR-DNNs) of heterogeneous tasks sheds light on their mutual transferability, and consequently enables knowledge transfer from one task to another so as to reduce the training effort of the latter. In this paper, we propose the DEeP Attribution gRAph (DEPARA) to investigate the transferability of knowledge learned from PR-DNNs. In DEPARA, nodes correspond to the inputs and are represented by their vectorized attribution maps with regards to the outputs of the PR-DNN. Edges denote the relatedness between inputs and are measured by the similarity of their features extracted from the PR-DNN. The knowledge transferability of two PR-DNNs is measured by the similarity of their corresponding DEPARAs. We apply DEPARA to two important yet under-studied problems in transfer learning: pre-trained model selection and layer selection. Extensive experiments are conducted to demonstrate the effectiveness and superiority of the proposed method in solving both these problems.</p>
+                                </div>
+                            </div>       
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="publication">
+                    <dl class="description">
+                        <div class="figure"><img src="images/song2019deep.png"></img></div>
+                        <dt class="ptitle">Deep Model Transferability from Attribution Maps</dt>
+                        <dd>Jie Song, Yixin Chen, Xinchao Wang, <b class='me'>Chengchao Shen</b>, Mingli Song</dd>
+                        <dd>Advance in Neural Information Processing Systems (<b>NeurIPS</b>, <b>CCF A</b>), 2019</dd>
+                        <dd>
+                            [<a href="https://papers.nips.cc/paper/2019/file/e94fe9ac8dc10dd8b9a239e6abee2848-Paper.pdf" target="_blank">paper</a>]
+                            [<a href="https://arxiv.org/abs/1909.11902" target="_blank">arXiv</a>]
+                            [<a href="https://papers.nips.cc/paper/2019/file/e94fe9ac8dc10dd8b9a239e6abee2848-Supplemental.zip" target="_blank">supp</a>]
+                            [<a href="https://github.com/zju-vipa/TransferbilityFromAttributionMaps" target="_blank">code</a>]
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                                <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
+@inproceedings{song2019deep,
+  title={Deep model transferability from attribution maps},
+  author={Song, Jie and Chen, Yixin and Wang, Xinchao and Shen, Chengchao and Song, Mingli},
+  booktitle={Advance in Neural Information Processing Systems (NeurIPS)},
+  year={2019}
+}
+                                </div>
+                            </div>
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                                <div class="abstract"  style="overflow: hidden; display: none;">  
+                                    <p>Exploring the transferability between heterogeneous tasks sheds light on their intrinsic interconnections, and consequently enables knowledge transfer from one task to another so as to reduce the training effort of the latter. In this paper, we propose an embarrassingly simple yet very efficacious approach to estimating the transferability of deep networks, especially those handling vision tasks. Unlike the seminal work of taskonomy that relies on a large number of annotations as supervision and is thus computationally cumbersome, the proposed approach requires no human annotations and imposes no constraints on the architectures of the networks. This is achieved, specifically, via projecting deep networks into a model space, wherein each network is treated as a point and the distances between two points are measured by deviations of their produced attribution maps. The proposed approach is several-magnitude times faster than taskonomy, and meanwhile preserves a task-wise topological structure highly similar to the one obtained by taskonomy. </p>
+                                </div>
+                            </div>       
+                        </dd>
+                    </dl>
+                </div>
 
             </div>
 
