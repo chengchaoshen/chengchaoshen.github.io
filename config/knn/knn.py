@@ -17,7 +17,7 @@ def knn():
         args.pin_memory = True
         args.patch_size = 16
         args.input_size = 224
-        args.data_root = '/tmp/ILSVRC2012'
+        args.data_root = '/path/to/ILSVRC2012'
         args.batch_size_per_gpu = 1024
     elif args.dataset == 'cifar100':
         args.num_workers = 4
@@ -25,7 +25,7 @@ def knn():
         args.pin_memory = True
         args.patch_size = 2
         args.input_size = 32
-        args.data_root = './dataset/cifar100'
+        args.data_root = '/path/to/dataset/cifar100'
         args.batch_size_per_gpu = 256
     else:
         args.num_workers = 4
@@ -33,7 +33,7 @@ def knn():
         args.pin_memory = True
         args.patch_size = 2
         args.input_size = 32
-        args.data_root = './dataset/cifar10'
+        args.data_root = '/path/to/dataset/cifar10'
         args.batch_size_per_gpu = 256
 
     args.encoder = 'momentum_encoder'

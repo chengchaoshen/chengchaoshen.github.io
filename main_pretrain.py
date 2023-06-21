@@ -217,7 +217,7 @@ def main_worker(gpu, ngpus_per_node, args):
     args.rank = rank
     misc.fix_random_seeds(args.seed)
 
-    # ------------------------------logger-----------------------------#
+    # ------------------------------ logger -----------------------------#
     if args.rank == 0:
         os.makedirs(args.exp_dir, exist_ok=True)
         log_root = args.exp_dir
@@ -229,7 +229,7 @@ def main_worker(gpu, ngpus_per_node, args):
     else:
         logger_tb, logger_console = None, None
 
-        # ---------------------------------model------------------------------#
+    # --------------------------------- model ------------------------------#
 
     if args.arch == 'vit-tiny':
         base_encoder = ViT(patch_size=args.patch_size, img_size=args.input_size, num_classes=args.out_dim,
@@ -247,7 +247,6 @@ def main_worker(gpu, ngpus_per_node, args):
         momentum_encoder = ViT(patch_size=args.patch_size, img_size=args.input_size,
                       num_classes=args.out_dim, embed_dim=768, depth=12, num_heads=12, mlp_ratio=4)
 
-    # ---------------------------------model------------------------------#
     if args.use_moco:
         model = ContrastMomentum_ViT(base_encoder, momentum_encoder, args.proj_layer,
                                      args.pred_layer, args.out_dim, args.hidden_dim)
@@ -267,7 +266,7 @@ def main_worker(gpu, ngpus_per_node, args):
         model = nn.SyncBatchNorm.convert_sync_batchnorm(model)
         model = DDP(model, device_ids=[args.rank], broadcast_buffers=False)
 
-    # ---------------------------dataload-----------------------#
+    # --------------------------- data load -----------------------#
     transform = TwoCropsTransform(
         args) if args.multi_crop_num == 0 else MultiCropsTransform(args)
     if args.dataset == 'cifar10':
@@ -296,15 +295,15 @@ def main_worker(gpu, ngpus_per_node, args):
 
     args.niters_per_epoch = len(train_set) // args.batch_size
 
-    # -----------------------------mix----------------------------------#
+    # ----------------------------- patchmix ----------------------------------#
     mixer = PatchMixer(
         num_classes=int(args.batch_size * args.world_size), mix_s=args.mix_size,
         mix_n=args.mix_num, mix_p=args.mix_p, smoothing=args.smoothing)
 
-    # ----------------------------loss---------------------------#
+    # ---------------------------- loss ---------------------------#
     criterion = MultiTempContrastiveLoss()
 
-    # ----------------------------optim---------------------------#
+    # ---------------------------- optimizer ---------------------------#
     if args.use_wd_cos:
         parameters = model.module.named_parameters() if isinstance(
             model, DDP) else model.named_parameters()
@@ -320,7 +319,7 @@ def main_worker(gpu, ngpus_per_node, args):
 
     start_epoch = 0
 
-    # ============ init schedulers ... ============
+    # ---------------------------- scheduler ---------------------------#
     lr_schedule = misc.cosine_scheduler(
         args.lr,  # linear scaling rule
         args.min_lr,
@@ -338,6 +337,7 @@ def main_worker(gpu, ngpus_per_node, args):
         np.ones(args.epochs - args.warmup_temp_epochs) * args.temp
     ))
 
+    # ---------------------------- checkpoint ---------------------------#
     if args.resume:
         if os.path.isfile(args.resume):
             print("=> loading checkpoint '{}'".format(args.resume))
@@ -358,6 +358,7 @@ def main_worker(gpu, ngpus_per_node, args):
     if args.rank == 0:
         path_save = os.path.join(args.exp_dir, logger_tb.log_name)
 
+    # ---------------------------- training ---------------------------#
     for epoch in range(start_epoch, args.epochs):
         if args.distributed:
             train_sampler.set_epoch(epoch)
