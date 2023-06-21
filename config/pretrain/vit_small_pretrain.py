@@ -10,7 +10,7 @@ def vit_small_pretrain():
     args.seed = 7
 
     if args.dataset == 'imagenet1k':
-        args.data_root = '/tmp/ILSVRC2012'
+        args.data_root = '/path/to/ILSVRC2012'
         args.input_size = 224
         args.patch_size = 16
         args.num_workers = 32
@@ -29,7 +29,7 @@ def vit_small_pretrain():
         args.smoothing = 0.0
         args.min_crop = 0.05
     elif args.dataset == 'cifar10' or args.dataset == 'cifar100':
-        args.data_root = './dataset'
+        args.data_root = '/path/to/dataset'
         args.input_size = 32
         args.patch_size = 2
         args.num_workers = 8

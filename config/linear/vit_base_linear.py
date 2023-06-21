@@ -22,7 +22,7 @@ def vit_base_linear():
         args.patch_size = 16
         args.input_size = 224
         args.batch_size = 1024
-        args.data_root = '/tmp/ILSVRC2012'
+        args.data_root = '/path/to/ILSVRC2012'
     else:
         args.num_workers = 4
         args.prefetch_factor = 2
@@ -30,7 +30,7 @@ def vit_base_linear():
         args.patch_size = 2
         args.input_size = 32
         args.batch_size = 256
-        args.data_root = './dataset'
+        args.data_root = '/path/to/dataset'
 
     args.encoder = 'momentum_encoder'  # [base_encoder,momentum_encoder]
 
