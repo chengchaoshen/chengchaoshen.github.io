@@ -72,9 +72,69 @@
 
                 <div class="publication">
                     <dl class="description">
+                        <div class="figure"><img src="images/shen2023inter.png"></img></div>
+                        <dt class="ptitle">Inter-Instance Similarity Modeling for Contrastive Learning</dt>
+                        <dd><b class='me'>Chengchao Shen</b>, Dawei Liu, Hao Tang, Zhe Qu, Jianxin Wang</dd>
+                        <dd>Under Review (<b>代表作</b>), 2023</dd>
+                        <dd>
+                            [<a href="https://arxiv.org/abs/2306.12243" target="_blank">arXiv</a>]
+                            [<a href="https://github.com/visresearch/patchmix" target="_blank">code</a>]
+                            [<a href="" target="_blank">blog+cn</a>]
+                            [<a href="" target="_blank">blog+en</a>]
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                                <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
+@article{shen2023inter,
+  author  = {Shen, Chengchao and Liu, Dawei and Tang, Hao and Qu, Zhe and Wang, Jianxin},
+  title   = {Inter-Instance Similarity Modeling for Contrastive Learning},
+  journal = {arXiv preprint arXiv:2306.12243},
+  year    = {2023},
+}
+                                </div>
+                            </div>  
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                                <div class="abstract"  style="overflow: hidden; display: none;">  
+                                    <p>The existing contrastive learning methods widely adopt one-hot instance discrimination as pretext task for self-supervised learning, which inevitably neglects rich inter-instance similarities among natural images, then leading to potential representation degeneration. In this paper, we propose a novel image mix method, PatchMix, for contrastive learning in Vision Transformer (ViT), to model inter-instance similarities among images. Following the nature of ViT, we randomly mix multiple images from mini-batch in patch level to construct mixed image patch sequences for ViT. Compared to the existing sample mix methods, our PatchMix can flexibly and efficiently mix more than two images and simulate more complicated similarity relations among natural images. In this manner, our contrastive framework can significantly reduce the gap between contrastive objective and ground truth in reality. Experimental results demonstrate that our proposed method significantly outperforms the previous state-of-the-art on both ImageNet-1K and CIFAR datasets, e.g., 3.0% linear accuracy improvement on ImageNet-1K and 8.7% kNN accuracy improvement on CIFAR100. Moreover, our method achieves the leading transfer performance on downstream tasks, object detection and instance segmentation on COCO dataset.</p>
+                                </div>
+                            </div>       
+                        </dd>
+                        
+                    </dl>
+                </div>
+
+                <div class="publication">
+                    <dl class="description">
+                        <div class="figure"><img src="images/shen2023asymmetric.png"></img></div>
+                        <dt class="ptitle">Asymmetric Patch Sampling for Contrastive Learning</dt>
+                        <dd><b class='me'>Chengchao Shen</b>, Jianzhong Chen, Shu Wang, Hulin Kuang, Jin Liu, Jianxin Wang</dd>
+                        <dd>Under Review (<b>代表作</b>), 2023</dd>
+                        <dd>
+                            [<a href="https://arxiv.org/abs/2306.02854" target="_blank">arXiv</a>]
+                            [<a href="https://github.com/visresearch/aps" target="_blank">code</a>]
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                                <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
+@article{shen2023asymmetric,
+      title={Asymmetric Patch Sampling for Contrastive Learning}, 
+      author={Shen, Chengchao and Chen, Jianzhong and Wang, Shu and Kuang, Hulin and Liu, Jin and Wang, Jianxin},
+      journal={arXiv preprint arXiv:2306.02854},
+      year={2023}
+}
+                                </div>
+                            </div>  
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                                <div class="abstract"  style="overflow: hidden; display: none;">  
+                                    <p>Asymmetric appearance between positive pair effectively reduces the risk of representation degradation in contrastive learning. However, there are still a mass of appearance similarities between positive pair constructed by the existing methods, which inhibits the further representation improvement. In this paper, we propose a novel asymmetric patch sampling strategy for contrastive learning, to further boost the appearance asymmetry for better representations. Specifically, dual patch sampling strategies are applied to the given image, to obtain asymmetric positive pairs. First, sparse patch sampling is conducted to obtain the first view, which reduces spatial redundancy of image and allows a more asymmetric view. Second, a selective patch sampling is proposed to construct another view with large appearance discrepancy relative to the first one. Due to the inappreciable appearance similarity between positive pair, the trained model is encouraged to capture the similarity on semantics, instead of low-level ones. Experimental results demonstrate that our proposed method significantly outperforms the existing self-supervised methods on both ImageNet-1K and CIFAR dataset, e.g., 2.5% finetune accuracy improvement on CIFAR100. Furthermore, our method achieves state-of-the-art performance on downstream tasks, object detection and instance segmentation on COCO. Additionally, compared to other self-supervised methods, our method is more efficient on both memory and computation during training.</p>
+                                </div>
+                            </div>       
+                        </dd>
+                        
+                    </dl>
+                </div>
+
+                <div class="publication">
+                    <dl class="description">
                         <div class="figure"><img src="images/sheng2023modeling.png"></img></div>
                         <dt class="ptitle">Modeling Global Distribution for Federated Learning with Label Distribution Skew</dt>
-                        <dd>Tao Sheng, <b class='me'>Chengchao Shen*</b>, Yuan Liu, Yeyu Ou, Zhe Qu, Jianxin Wang</dd>
+                        <dd>Tao Sheng, <b class='me'>Chengchao Shen*</b>, Yuan Liu, Yeyu Ou, Zhe Qu, Yixiong Liang, Jianxin Wang</dd>
                         <dd>Pattern Recognition (<b>中科院一区</b>, IF=8.5), 2023</dd>
                         <dd>
                             [<a href="https://arxiv.org/abs/2212.08883" target="_blank">arXiv</a>]
