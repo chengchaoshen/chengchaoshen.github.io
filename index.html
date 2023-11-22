@@ -124,7 +124,8 @@
                                 <div class="abstract"  style="overflow: hidden; display: none;">  
                                     <p>Asymmetric appearance between positive pair effectively reduces the risk of representation degradation in contrastive learning. However, there are still a mass of appearance similarities between positive pair constructed by the existing methods, which inhibits the further representation improvement. In this paper, we propose a novel asymmetric patch sampling strategy for contrastive learning, to further boost the appearance asymmetry for better representations. Specifically, dual patch sampling strategies are applied to the given image, to obtain asymmetric positive pairs. First, sparse patch sampling is conducted to obtain the first view, which reduces spatial redundancy of image and allows a more asymmetric view. Second, a selective patch sampling is proposed to construct another view with large appearance discrepancy relative to the first one. Due to the inappreciable appearance similarity between positive pair, the trained model is encouraged to capture the similarity on semantics, instead of low-level ones. Experimental results demonstrate that our proposed method significantly outperforms the existing self-supervised methods on both ImageNet-1K and CIFAR dataset, e.g., 2.5% finetune accuracy improvement on CIFAR100. Furthermore, our method achieves state-of-the-art performance on downstream tasks, object detection and instance segmentation on COCO. Additionally, compared to other self-supervised methods, our method is more efficient on both memory and computation during training.</p>
                                 </div>
-                            </div>       
+                            </div> 
+                            <img src="https://img.shields.io/github/stars/visresearch/aps.svg?style=social&amp;label=Star" alt="GitHub stars">
                         </dd>
                         
                     </dl>
@@ -156,7 +157,8 @@
                                 <div class="abstract"  style="overflow: hidden; display: none;">  
                                     <p>Federated learning achieves joint training of deep models by connecting decentralized data sources, which can significantly mitigate the risk of privacy leakage. However, in a more general case, the distributions of labels among clients are different, called ``label distribution skew''. Directly applying conventional federated learning without consideration of label distribution skew issue significantly hurts the performance of the global model. To this end, we propose a novel federated learning method, named FedMGD, to alleviate the performance degradation caused by the label distribution skew issue. It introduces a global Generative Adversarial Network to model the global data distribution without access to local datasets, so the global model can be trained using the global information of data distribution without privacy leakage. The experimental results demonstrate that our proposed method significantly outperforms the state-of-the-art on several public benchmarks.</p>
                                 </div>
-                            </div>       
+                            </div>
+                            <img src="https://img.shields.io/github/stars/Sheng-T/FedMGD.svg?style=social&amp;label=Star" alt="GitHub stars">
                         </dd>
                         
                     </dl>
@@ -189,7 +191,8 @@
                                 <div class="abstract"  style="overflow: hidden; display: none;">  
                                     <p>Generative Adversarial Networks (GANs) have demonstrated unprecedented success in various image generation tasks. The encouraging results, however, come at the price of a cumbersome training process, during which the generator and discriminator are alternately updated in two stages. In this paper, we investigate a general training scheme that enables training GANs efficiently in only one stage. Based on the adversarial losses of the generator and discriminator, we categorize GANs into two classes, Symmetric GANs and Asymmetric GANs, and introduce a novel gradient decomposition method to unify the two, allowing us to train both classes in one stage and hence alleviate the training effort. We also computationally analyze the efficiency of the proposed method, and empirically demonstrate that, the proposed method yields a solid 1.5× acceleration across various datasets and network architectures. Furthermore, we show that the proposed method is readily applicable to other adversarial-training scenarios, such as data-free knowledge distillation. </p>
                                 </div>
-                            </div>       
+                            </div>
+                            <img src="https://img.shields.io/github/stars/zju-vipa/OSGAN.svg?style=social&amp;label=Star" alt="GitHub stars">
                         </dd>
                         
                     </dl>
@@ -223,7 +226,8 @@
                                 <div class="abstract"  style="overflow: hidden; display: none;">  
                                     <p>Knowledge distillation has demonstrated encouraging performances in deep model compression. Most existing approaches, however, require massive labeled data to accomplish the knowledge transfer, making the model compression a cumbersome and costly process. In this paper, we investigate the practical few-shot knowledge distillation scenario, where we assume only a few samples without human annotations are available for each category. To this end, we introduce a principled dual-stage distillation scheme tailored for few-shot data. In the first step, we graft the student blocks one by one onto the teacher, and learn the parameters of the grafted block intertwined with those of the other teacher blocks. In the second step, the trained student blocks are progressively connected and then together grafted onto the teacher network, allowing the learned student blocks to adapt themselves to each other and eventually replace the teacher network. Experiments demonstrate that our approach, with only a few unlabeled samples, achieves gratifying results on CIFAR10, CIFAR100, and ILSVRC-2012. On CIFAR10 and CIFAR100, our performances are even on par with those of knowledge distillation schemes that utilize the full datasets.</p>
                                 </div>
-                            </div>       
+                            </div>
+                            <img src="https://img.shields.io/github/stars/zju-vipa/NetGraft.svg?style=social&amp;label=Star" alt="GitHub stars">
                         </dd>
                         
                     </dl>
@@ -286,7 +290,8 @@
                                 <div class="abstract"  style="overflow: hidden; display: none;">  
                                     <p>With the rapid development of deep learning, there have been an unprecedentedly large number of trained deep network models available online. Reusing such trained models can significantly reduce the cost of training the new models from scratch, if not infeasible at all as the annotations used for the training original networks are often unavailable to public. We propose in this paper to study a new model-reusing task, which we term as \emph{knowledge amalgamation}. Given multiple trained teacher networks, each of which specializes in a different classification problem, the goal of knowledge amalgamation is to learn a lightweight student model capable of handling the comprehensive classification. We assume no other annotations except the outputs from the teacher models are available, and thus focus on extracting and amalgamating knowledge from the multiple teachers. To this end, we propose a pilot two-step strategy to tackle the knowledge amalgamation task, by learning first the compact feature representations from teachers and then the network parameters in a layer-wise manner so as to build the student model. We apply this approach to four public datasets and obtain very encouraging results: even without any human annotation, the obtained student model is competent to handle the comprehensive classification task and in most cases outperforms the teachers in individual sub-tasks.</p>
                                 </div>
-                            </div>       
+                            </div>
+                            <img src="https://img.shields.io/github/stars/zju-vipa/KamalEngine.svg?style=social&amp;label=Star" alt="GitHub stars">
                         </dd>
                         
                     </dl>
