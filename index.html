@@ -71,10 +71,44 @@
 
                 <div class="publication">
                     <dl class="description">
+                        <div class="figure"><img src="images/shen2024multi.png"></img></div>
+                        <dt class="ptitle">Multi-Grained Contrast for Data-Efficient Unsupervised Representation Learning</dt>
+                        <dd><b class='me'>Chengchao Shen</b>, Jianzhong Chen, Jianxin Wang</dd>
+                        <dd>Arxiv, 2024</dd>
+                        <dd>
+                            [<a href="https://arxiv.org/abs/2407.02014" target="_blank">arXiv</a>]
+                            [<a href="https://github.com/visresearch/mgc" target="_blank">code</a>]
+                            [<a href="" target="_blank">blog+cn</a>]
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                                <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
+@article{shen2024multi,
+    author  = {Shen, Chengchao and Chen, Jianzhong and Wang, Jianxin},
+    title   = {Multi-Grained Contrast for Data-Efficient Unsupervised Representation Learning},
+    journal = {arXiv preprint arXiv:2407.02014},
+    year    = {2024},
+}
+                                </div>
+                            </div>  
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                                <div class="abstract"  style="overflow: hidden; display: none;">  
+                                    <p>The existing contrastive learning methods mainly focus on single-grained representation learning, e.g., part-level, object-level or scene-level ones, thus inevitably neglecting the transferability of representations on other granularity levels. In this paper, we aim to learn multi-grained representations, which can effectively describe the image on various granularity levels, thus improving generalization on extensive downstream tasks. To this end, we propose a novel Multi-Grained Contrast method (MGC) for unsupervised representation learning. Specifically, we construct delicate multi-grained correspondences between positive views and then conduct multi-grained contrast by the correspondences to learn more general unsupervised representations.</p>
+
+                                    <p>Without pretrained on large-scale dataset, our method significantly outperforms the existing state-of-the-art methods on extensive downstream tasks, including object detection, instance segmentation, scene parsing, semantic segmentation and keypoint detection. Moreover, experimental results support the data-efficient property and excellent representation transferability of our method. </p>
+                                </div>
+                            </div>
+                            <img src="https://img.shields.io/github/stars/visresearch/mgc.svg?style=social&amp;label=Star" alt="GitHub stars"
+                                style="text-align:center;vertical-align:middle">
+                        </dd>
+                        
+                    </dl>
+                </div>
+
+                <div class="publication">
+                    <dl class="description">
                         <div class="figure"><img src="images/shen2023inter.png"></img></div>
                         <dt class="ptitle">Inter-Instance Similarity Modeling for Contrastive Learning</dt>
                         <dd><b class='me'>Chengchao Shen</b>, Dawei Liu, Hao Tang, Zhe Qu, Jianxin Wang</dd>
-                        <dd>Under Review (<b>Representative Research</b>), 2023</dd>
+                        <dd>Arxiv, 2023</dd>
                         <dd>
                             [<a href="https://arxiv.org/abs/2306.12243" target="_blank">arXiv</a>]
                             [<a href="https://github.com/visresearch/patchmix" target="_blank">code</a>]
@@ -107,7 +141,7 @@
                         <div class="figure"><img src="images/shen2023asymmetric.png"></img></div>
                         <dt class="ptitle">Asymmetric Patch Sampling for Contrastive Learning</dt>
                         <dd><b class='me'>Chengchao Shen</b>, Jianzhong Chen, Shu Wang, Hulin Kuang, Jin Liu, Jianxin Wang</dd>
-                        <dd>Under Review (<b>Representative Research</b>), 2023</dd>
+                        <dd>Arxiv, 2023</dd>
                         <dd>
                             [<a href="https://arxiv.org/abs/2306.02854" target="_blank">arXiv</a>]
                             [<a href="https://github.com/visresearch/aps" target="_blank">code</a>]
@@ -374,6 +408,7 @@
                         <dd>
                             [<a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Song_Transductive_Unbiased_Embedding_CVPR_2018_paper.pdf" target="_blank">paper</a>]
                             [<a href="http://arxiv.org/abs/1803.11320v1" target="_blank">arXiv</a>]
+                            [<a href="https://github.com/Ying-Yuchen/QFSL-zeroshot" target="_blank">code</a>]
                             <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
                                 <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
 @inproceedings{song2018transductive,
@@ -391,6 +426,8 @@
                                     <p>Most existing Zero-Shot Learning (ZSL) methods have the strong bias problem, in which instances of unseen (target) classes tend to be categorized as one of the seen (source) classes. So they yield poor performance after being deployed in the generalized ZSL settings. In this paper, we propose a straightforward yet effective method named Quasi-Fully Supervised Learning (QFSL) to alleviate the bias problem. Our method follows the way of transductive learning, which assumes that both the labeled source images and unlabeled target images are available for training. In the semantic embedding space, the labeled source images are mapped to several fixed points specified by the source categories, and the unlabeled target images are forced to be mapped to other points specified by the target categories. Experiments conducted on AwA2, CUB and SUN datasets demonstrate that our method outperforms existing state-of-the-art approaches by a huge margin of 9.3~24.5% following generalized ZSL settings, and by a large margin of 0.2~16.2% following conventional ZSL settings.</p>
                                 </div>
                             </div>       
+                            <img src="https://img.shields.io/github/stars/Ying-Yuchen/QFSL-zeroshot.svg?style=social&amp;label=Star" alt="GitHub stars"
+                                style="text-align:center;vertical-align:middle">
                         </dd>
                     </dl>
                 </div>
@@ -575,16 +612,16 @@
                 <b style="font-size: 20px;">Program Committee</b>:
                 <!-- <h4 style="font-size: 20px; padding-top: -10px;">Program Committee: </b> -->
                 <ul>
-                    <li>The IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2020, 2021, 2022, 2023</li>
-                    <li>The IEEE International Conference on Computer Vision (ICCV), 2019, 2021, 2023</li>
-                    <li>The European Conference on Computer Vision (ECCV), 2022</li>
-                    <li>AAAI Conference on Artificial Intelligence (AAAI), 2020, 2021</li>
-                    <li>Advances in Neural Information Processing Systems (NeurIPS), 2021, 2022, 2023</li>
-                    <li>International Conference on Learning Representations (ICLR), 2022, 2023</li>
-                    <li>International Conference on Machine Learning (ICML), 2022, 2023</li>
-                    <li>International Joint Conference on Artificial Intelligence (IJCAI), 2022</li>
-                    <li>The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD), 2022</li>
-                    <li>The European Conference on Artificial Intelligence (ECAI), 2023</li>
+                    <li>The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</li>
+                    <li>The IEEE International Conference on Computer Vision (ICCV)</li>
+                    <li>The European Conference on Computer Vision (ECCV)</li>
+                    <li>AAAI Conference on Artificial Intelligence (AAAI)</li>
+                    <li>Advances in Neural Information Processing Systems (NeurIPS)</li>
+                    <li>International Conference on Learning Representations (ICLR)</li>
+                    <li>International Conference on Machine Learning (ICML)</li>
+                    <li>International Joint Conference on Artificial Intelligence (IJCAI)</li>
+                    <li>The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD)</li>
+                    <li>The European Conference on Artificial Intelligence (ECAI)</li>
                 </ul>
 
                 <b style="font-size: 20px;">Journal Reviewer</b>:
@@ -592,6 +629,7 @@
                     <li>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</li>
                     <li>IEEE Transactions on Image Processing (TIP)</li>
                     <li>IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</li>
+                    <li>Machine Learning</li>
                 </ul>
 
             </div>
