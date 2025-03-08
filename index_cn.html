@@ -4,11 +4,18 @@
         <meta charset="utf-8">
         
         <script type="text/javascript" src="./jquery.min.js"></script>
+        <script type="text/javascript" src="./myfunc.js"></script>
 
         <link rel="stylesheet" type="text/css" href="./mystyle.css">
 
         <title>沈成超 个人主页</title>
     </head>
+
+    <!-- Modal for image zoom -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
 
     <body>
         <div class="container">
@@ -72,7 +79,7 @@
 
                 <div class="publication">
                     <dl class="description">
-                        <div class="figure"><img src="images/tang2025data.png"></img></div>
+                        <div class="figure"><img src="images/tang2025data.png" class="paper-image"></img></div>
                         <dt class="ptitle">Data-Efficient Multi-Scale Fusion Vision Transformer</dt>
                         <dd>Hao Tang, Dawei Liu, <b class='me'>Chengchao Shen*</b></dd>
                         <dd>Pattern Recognition (<b>中科院一区</b>, IF=7.5), 2025</dd>
@@ -104,7 +111,7 @@
                 
                 <div class="publication">
                     <dl class="description">
-                        <div class="figure"><img src="images/shen2024multi.png"></img></div>
+                        <div class="figure"><img src="images/shen2024multi.png" class="paper-image"></img></div>
                         <dt class="ptitle">Multi-Grained Contrast for Data-Efficient Unsupervised Representation Learning</dt>
                         <dd><b class='me'>Chengchao Shen</b>, Jianzhong Chen, Jianxin Wang</dd>
                         <dd>Arxiv, 2024</dd>
@@ -138,7 +145,7 @@
 
                 <div class="publication">
                     <dl class="description">
-                        <div class="figure"><img src="images/shen2023inter.png"></img></div>
+                        <div class="figure"><img src="images/shen2023inter.png" class="paper-image"></img></div>
                         <dt class="ptitle">Inter-Instance Similarity Modeling for Contrastive Learning</dt>
                         <dd><b class='me'>Chengchao Shen</b>, Dawei Liu, Hao Tang, Zhe Qu, Jianxin Wang</dd>
                         <dd>Arxiv, 2023</dd>
@@ -171,7 +178,7 @@
 
                 <div class="publication">
                     <dl class="description">
-                        <div class="figure"><img src="images/shen2023asymmetric.png"></img></div>
+                        <div class="figure"><img src="images/shen2023asymmetric.png" class="paper-image"></img></div>
                         <dt class="ptitle">Asymmetric Patch Sampling for Contrastive Learning</dt>
                         <dd><b class='me'>Chengchao Shen</b>, Jianzhong Chen, Shu Wang, Hulin Kuang, Jin Liu, Jianxin Wang</dd>
                         <dd>Pattern Recognition (<b>中科院一区</b>, IF=7.5), 2025</dd>
@@ -205,7 +212,7 @@
 
                 <div class="publication">
                     <dl class="description">
-                        <div class="figure"><img src="images/sheng2023modeling.png"></img></div>
+                        <div class="figure"><img src="images/sheng2023modeling.png" class="paper-image"></img></div>
                         <dt class="ptitle">Modeling Global Distribution for Federated Learning with Label Distribution Skew</dt>
                         <dd>Tao Sheng, <b class='me'>Chengchao Shen*</b>, Yuan Liu, Yeyu Ou, Zhe Qu, Yixiong Liang, Jianxin Wang</dd>
                         <dd>Pattern Recognition (<b>中科院一区</b>, IF=8.5), 2023</dd>
@@ -239,7 +246,7 @@
                 
                 <div class="publication">
                     <dl class="description">
-                        <div class="figure"><img src="images/shen2021training.png"></img></div>
+                        <div class="figure"><img src="images/shen2021training.png" class="paper-image"></img></div>
                         <dt class="ptitle">Training Generative Adversarial Networks in One Stage</dt>
                         <dd><b class='me'>Chengchao Shen</b>, Youtan Yin, Xinchao Wang, Xubin Li, Jie Song, Mingli Song</dd>
                         <dd>The IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>, <b>CCF A</b>), 2021</dd>
@@ -274,7 +281,7 @@
 
                 <div class="publication">
                     <dl class="description">
-                        <div class="figure"><img src="images/shen2021progressive.png"></img></div>
+                        <div class="figure"><img src="images/shen2021progressive.png" class="paper-image"></img></div>
                         <dt class="ptitle">Progressive Network Grafting for Few-Shot Knowledge Distillation</dt>
                         <dd><b class='me'>Chengchao Shen</b>, Xinchao Wang, Youtan Yin, Jie Song, Sihui Luo, Mingli Song</dd>
                         <dd>AAAI Conference on Artificial Intelligence (<b>AAAI</b>, <b>CCF A</b>), 2021</dd>
@@ -310,7 +317,7 @@
 
                 <div class="publication">
                     <dl class="description">
-                        <div class="figure"><img src="images/shen2019customizing.png"></img></div>
+                        <div class="figure"><img src="images/shen2019customizing.png" class="paper-image"></img></div>
                         <dt class="ptitle">Customizing Student Networks From Heterogeneous Teachers via Adaptive Knowledge Amalgamation</dt>
                         <dd><b class='me'>Chengchao Shen</b>, Mengqi Xue, Xinchao Wang, Jie Song, Li Sun, Mingli Song</dd>
                         <dd>The IEEE International Conference on Computer Vision (<b>ICCV</b>, <b>CCF A</b>), 2019</dd>
@@ -345,7 +352,7 @@
 
                 <div class="publication">
                     <dl class="description">
-                        <div class="figure"><img src="images/shen2019amalgamating.png"></img></div>
+                        <div class="figure"><img src="images/shen2019amalgamating.png" class="paper-image"></img></div>
                         <dt class="ptitle">Amalgamating Knowledge towards Comprehensive Classification</dt>
                         <dd><b class='me'>Chengchao Shen</b>, Xinchao Wang, Jie Song, Li Sun, Mingli Song</dd>
                         <dd>AAAI Conference on Artificial Intelligence (<b>AAAI</b>, <b>CCF A</b>), 2019</dd>
@@ -378,7 +385,7 @@
 
                 <div class="publication">
                     <dl class="description">
-                        <div class="figure"><img src="images/shen2018intra.png"></img></div>
+                        <div class="figure"><img src="images/shen2018intra.png" class="paper-image"></img></div>
                         <dt class="ptitle">Intra-class Structure Aware Networks for Screen Defect Detection</dt>
                         <dd><b class='me'>Chengchao Shen</b>, Jie Song, Sihui Luo, Li Sun, Mingli Song</dd>
                         <dd>International Conference on Neural Information Processing (<b>ICONIP</b>, <b>CCF C</b>), 2018</dd>
@@ -408,7 +415,7 @@
 
                 <div class="publication">
                     <dl class="description">
-                        <div class="figure"><img src="images/song2018selective.png"></img></div>
+                        <div class="figure"><img src="images/song2018selective.png" class="paper-image"></img></div>
                         <dt class="ptitle">Selective Zero-Shot Classification With Augmented Attributes</dt>
                         <dd>Jie Song, <b class='me'>Chengchao Shen</b>, Jie Lei, An-Xiang Zeng, Kairi Ou, Dacheng Tao, Mingli Song</dd>
                         <dd>The European Conference on Computer Vision (<b>ECCV</b>, <b>CCF B</b>), 2018</dd>
@@ -437,7 +444,7 @@
 
                 <div class="publication">
                     <dl class="description">
-                        <div class="figure"><img src="images/song2018transductive.png"></img></div>
+                        <div class="figure"><img src="images/song2018transductive.png" class="paper-image"></img></div>
                         <dt class="ptitle">Transductive Unbiased Embedding for Zero-Shot Learning</dt>
                         <dd>Jie Song, <b class='me'>Chengchao Shen</b>, Yezhou Yang, Yang Liu, Mingli Song</dd>
                         <dd>The IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>, <b>CCF A</b>), 2018</dd>
@@ -470,7 +477,7 @@
 
                 <div class="publication">
                     <dl class="description">
-                        <div class="figure"><img src="images/fang2021contrastive.png"></img></div>
+                        <div class="figure"><img src="images/fang2021contrastive.png" class="paper-image"></img></div>
                         <dt class="ptitle">Contrastive Model Inversion for Data-Free Knowledge Distillation</dt>
                         <dd>Gongfan Fang, Jie Song, Xinchao Wang, <b class='me'>Chengchao Shen</b>, Xingen Wang, Mingli Song</dd>
                         <dd>International Joint Conference on Artificial Intelligence (<b>IJCAI</b>, <b>CCF A</b>), 2021</dd>
@@ -503,7 +510,7 @@
 
                 <div class="publication">
                     <dl class="description">
-                        <div class="figure"><img src="images/fang2021mosaicking.png"></img></div>
+                        <div class="figure"><img src="images/fang2021mosaicking.png" class="paper-image"></img></div>
                         <dt class="ptitle">Mosaicking to Distill: Knowledge Distillation from Out-of-Domain Data</dt>
                         <dd>Gongfan Fang, Yifan Bao, Jie Song, Xinchao Wang, Donglin Xie, <b class='me'>Chengchao Shen</b>, Mingli Song</dd>
                         <dd>Advances in Neural Information Processing Systems (<b>NeurIPS</b>, <b>CCF A</b>), 2021</dd>
@@ -535,7 +542,7 @@
 
                 <div class="publication">
                     <dl class="description">
-                        <div class="figure"><img src="images/fang2019data.png"></img></div>
+                        <div class="figure"><img src="images/fang2019data.png" class="paper-image"></img></div>
                         <dt class="ptitle">Data-Free Adversarial Distillation</dt>
                         <dd>Gongfan Fang, Jie Song, <b class='me'>Chengchao Shen</b>, Xinchao Wang, Da Chen, Mingli Song</dd>
                         <dd>ArXiv:1912.11006, 2019</dd>
@@ -565,7 +572,7 @@
 
                 <div class="publication">
                     <dl class="description">
-                        <div class="figure"><img src="images/song2020depara.png"></img></div>
+                        <div class="figure"><img src="images/song2020depara.png" class="paper-image"></img></div>
                         <dt class="ptitle">DEPARA: Deep Attribution Graph for Deep Knowledge Transferability</dt>
                         <dd>Jie Song, Yixin Chen, Jingwen Ye, Xinchao Wang, <b class='me'>Chengchao Shen</b>, Feng Mao, Mingli Song</dd>
                         <dd>The IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>, <b>CCF A</b>), 2020</dd>
@@ -598,7 +605,7 @@
 
                 <div class="publication">
                     <dl class="description">
-                        <div class="figure"><img src="images/song2019deep.png"></img></div>
+                        <div class="figure"><img src="images/song2019deep.png" class="paper-image"></img></div>
                         <dt class="ptitle">Deep Model Transferability from Attribution Maps</dt>
                         <dd>Jie Song, Yixin Chen, Xinchao Wang, <b class='me'>Chengchao Shen</b>, Mingli Song</dd>
                         <dd>Advances in Neural Information Processing Systems (<b>NeurIPS</b>, <b>CCF A</b>), 2019</dd>
