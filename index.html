@@ -71,37 +71,6 @@
             </table>
 
             <!-- --------------- Publications --------------- -->
-            <div class="publication">
-                    <dl class="description">
-                        <div class="figure"><img src="images/tang2025compact.png" class="paper-image"></img></div>
-                        <dt class="ptitle">Learning Compact Vision Tokens for Efficient Large Multimodal Models</dt>
-                        <dd>Hao Tang, <b class='me'>Chengchao Shen</b></dd>
-                        <dd>Arxiv, 2025</dd>
-                        <dd>
-                            [<a href="" target="_blank">arXiv</a>]
-                            [<a href="https://github.com/visresearch/LLaVA-STF" target="_blank">code</a>]
-                            [<a href="https://huggingface.co/visresearch/LLaVA-STF" target="_blank">weights</a>]
-                            [<a href="" target="_blank">blog</a>]
-                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
-                                <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
-@article{tang2025compact,
-  author  = {Tang, Hao and Shen, Chengchao},
-  title   = {Learning Compact Vision Tokens for Efficient Large Multimodal Models},
-  year    = {2025},
-}
-                                </div>
-                            </div>  
-                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
-                                <div class="abstract"  style="overflow: hidden; display: none;">  
-                                    <p>Large multimodal models (LMMs) suffer significant computational challenges due to the high cost of Large Language Models (LLMs) and the quadratic complexity of processing long vision token sequences. In this paper, we explore the spatial redundancy among vision tokens and shorten the length of vision token sequences for inference acceleration. Specifically, we propose a Spatial Token Fusion (STF) method to learn compact vision tokens for short vision token sequence, where spatial-adjacent tokens are fused into one. Meanwhile, weight-frozen vision encoder can not well adapt to the demand of extensive downstream vision-language tasks. To this end, we further introduce a Multi-Block Token Fusion (MBTF) module to supplement multi-granularity features for the reduced token sequence. Overall, we combine STC and MLTC module to balance token reduction and information preservation, thereby improving inference efficiency without sacrificing multimodal reasoning capabilities. Experimental results demonstrate that our method based on LLaVA-1.5 achieves comparable or even superior performance to the baseline on 8 popular vision-language benchmarks with only 25% vision tokens of baseline.</p>
-                                </div>
-                            </div>
-<!--                             <img src="https://img.shields.io/github/stars/visresearch/patchmix.svg?style=social&amp;label=Star" alt="GitHub stars" -->
-                                style="text-align:center;vertical-align:middle">
-                        </dd>
-                        
-                    </dl>
-                </div>
             
             <div class="publications" id="publications">
                 <!-- <br> -->
@@ -136,6 +105,38 @@
                                 </div>
                             </div> 
                             <img src="https://img.shields.io/github/stars/visresearch/dems.svg?style=social&amp;label=Star" alt="GitHub stars"
+                                style="text-align:center;vertical-align:middle">
+                        </dd>
+                        
+                    </dl>
+                </div>
+
+                <div class="publication">
+                    <dl class="description">
+                        <div class="figure"><img src="images/tang2025compact.png" class="paper-image"></img></div>
+                        <dt class="ptitle">Learning Compact Vision Tokens for Efficient Large Multimodal Models</dt>
+                        <dd>Hao Tang, <b class='me'>Chengchao Shen</b></dd>
+                        <dd>Arxiv, 2025</dd>
+                        <dd>
+                            [<a href="" target="_blank">arXiv</a>]
+                            [<a href="https://github.com/visresearch/LLaVA-STF" target="_blank">code</a>]
+                            [<a href="https://huggingface.co/visresearch/LLaVA-STF" target="_blank">weights</a>]
+                            [<a href="" target="_blank">blog</a>]
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                                <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
+@article{tang2025compact,
+  author  = {Tang, Hao and Shen, Chengchao},
+  title   = {Learning Compact Vision Tokens for Efficient Large Multimodal Models},
+  year    = {2025},
+}
+                                </div>
+                            </div>  
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                                <div class="abstract"  style="overflow: hidden; display: none;">  
+                                    <p>Large multimodal models (LMMs) suffer significant computational challenges due to the high cost of Large Language Models (LLMs) and the quadratic complexity of processing long vision token sequences. In this paper, we explore the spatial redundancy among vision tokens and shorten the length of vision token sequences for inference acceleration. Specifically, we propose a Spatial Token Fusion (STF) method to learn compact vision tokens for short vision token sequence, where spatial-adjacent tokens are fused into one. Meanwhile, weight-frozen vision encoder can not well adapt to the demand of extensive downstream vision-language tasks. To this end, we further introduce a Multi-Block Token Fusion (MBTF) module to supplement multi-granularity features for the reduced token sequence. Overall, we combine STC and MLTC module to balance token reduction and information preservation, thereby improving inference efficiency without sacrificing multimodal reasoning capabilities. Experimental results demonstrate that our method based on LLaVA-1.5 achieves comparable or even superior performance to the baseline on 8 popular vision-language benchmarks with only 25% vision tokens of baseline.</p>
+                                </div>
+                            </div>
+<!--                             <img src="https://img.shields.io/github/stars/visresearch/patchmix.svg?style=social&amp;label=Star" alt="GitHub stars" -->
                                 style="text-align:center;vertical-align:middle">
                         </dd>
                         
