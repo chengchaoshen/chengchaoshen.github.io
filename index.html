@@ -79,6 +79,102 @@
 
                 <div class="publication">
                     <dl class="description">
+                        <div class="figure"><img src="images/shen2025diversity.png" class="paper-image"></img></div>
+                        <dt class="ptitle">Diversity-Guided MLP Reduction for Efficient Large Vision Transformers</dt>
+                        <dd><b class='me'>Chengchao Shen</b>, Hourun Zhu, Gongfan Fang, Jianxin Wang, Xinchao Wang</dd>
+                        <dd>Arxiv, 2025</dd>
+                        <dd>
+                            [<a href="" target="_blank">arXiv</a>]
+                            [<a href="https://github.com/visresearch/DGMR" target="_blank">code</a>]
+                            [<a href="https://huggingface.co/visresearch/DGMR" target="_blank">weights</a>]
+                            [<a href="" target="_blank">blog</a>]
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                            <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
+@article{shen2025diversity,
+  author  = {Shen, Chengchao, Zhu, Hourun and Fang, Gongfan and Wang, Jianxin and Wang, Xinchao},
+  title   = {SDMPrune: Self-Distillation MLP Pruning for Efficient Large Language Models},
+  year    = {2025},
+}
+                                </div>
+                            </div>  
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                                <div class="abstract" style="overflow: hidden; display: none;">  
+                                    <p>Transformer models achieve excellent scaling property, where the performance is improved with the increment of model capacity. However, large-scale model parameters lead to an unaffordable cost of computing and memory. We analyze popular transformer architectures and find that multilayer perceptron (MLP) modules take up the majority of model parameters. To this end, we focus on the recoverability of the compressed models and propose a Diversity-Guided MLP Reduction (DGMR) method to significantly reduce the parameters of large vision transformers with only negligible performance degradation. Specifically, we conduct a Gram-Schmidt weight pruning strategy to eliminate redundant neurons of MLP hidden layer, while preserving weight diversity for better performance recover during distillation. Compared to the model trained from scratch, our pruned model only requires 0.06% data of LAION-2B (for the training of large vision transformers) without labels (ImageNet-1K) to recover the original performance. Experimental results on several state-of-the-art large vision transformers demonstrate that our method achieves a more than 57.0% parameter and FLOPs reduction in a near lossless manner. Notably, for EVA-CLIP-E (4.4B), our method accomplishes a 71.5% parameter and FLOPs reduction without performance degradation. </p>
+                                </div>
+                            </div>
+                             <img src="https://img.shields.io/github/stars/visresearch/DGMR.svg?style=social&amp;label=Star" alt="GitHub stars" 
+                                style="text-align:center;vertical-align:middle">
+                        </dd>
+                        
+                    </dl>
+                </div>
+
+                <div class="publication">
+                    <dl class="description">
+                        <div class="figure"><img src="images/zhu2025sdmprune.png" class="paper-image"></img></div>
+                        <dt class="ptitle">SDMPrune: Self-Distillation MLP Pruning for Efficient Large Language Models</dt>
+                        <dd>Hourun Zhu, <b class='me'>Chengchao Shen*</b></dd>
+                        <dd>Arxiv, 2025</dd>
+                        <dd>
+                            [<a href="" target="_blank">arXiv</a>]
+                            [<a href="https://github.com/visresearch/SDMPrune" target="_blank">code</a>]
+                            [<a href="https://huggingface.co/visresearch/SDMPrune" target="_blank">weights</a>]
+                            [<a href="" target="_blank">blog</a>]
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                            <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
+@article{zhu2025sdmprune,
+  author  = {Zhu, Hourun and Shen, Chengchao},
+  title   = {SDMPrune: Self-Distillation MLP Pruning for Efficient Large Language Models},
+  year    = {2025},
+}
+                                </div>
+                            </div>  
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                                <div class="abstract" style="overflow: hidden; display: none;">  
+                                    <p>Transformer models achieve excellent scaling property, where the performance is improved with the increment of model capacity. However, large-scale model parameters lead to an unaffordable cost of computing and memory. We analyze popular transformer architectures and find that multilayer perceptron (MLP) modules take up the majority of model parameters. To this end, we focus on the recoverability of the compressed models and propose a Diversity-Guided MLP Reduction (DGMR) method to significantly reduce the parameters of large vision transformers with only negligible performance degradation. Specifically, we conduct a Gram-Schmidt weight pruning strategy to eliminate redundant neurons of MLP hidden layer, while preserving weight diversity for better performance recover during distillation. Compared to the model trained from scratch, our pruned model only requires 0.06% data of LAION-2B (for the training of large vision transformers) without labels (ImageNet-1K) to recover the original performance. Experimental results on several state-of-the-art large vision transformers demonstrate that our method achieves a more than 57.0% parameter and FLOPs reduction in a near lossless manner. Notably, for EVA-CLIP-E (4.4B), our method accomplishes a 71.5\% parameter and FLOPs reduction without performance degradation. </p>
+                                </div>
+                            </div>
+                             <img src="https://img.shields.io/github/stars/visresearch/SDMPrune.svg?style=social&amp;label=Star" alt="GitHub stars" 
+                                style="text-align:center;vertical-align:middle">
+                        </dd>
+                        
+                    </dl>
+                </div>
+
+                <div class="publication">
+                    <dl class="description">
+                        <div class="figure"><img src="images/tang2025compact.png" class="paper-image"></img></div>
+                        <dt class="ptitle">Learning Compact Vision Tokens for Efficient Large Multimodal Models</dt>
+                        <dd>Hao Tang, <b class='me'>Chengchao Shen*</b></dd>
+                        <dd>Arxiv, 2025</dd>
+                        <dd>
+                            [<a href="" target="_blank">arXiv</a>]
+                            [<a href="https://github.com/visresearch/LLaVA-STF" target="_blank">code</a>]
+                            [<a href="https://huggingface.co/visresearch/LLaVA-STF" target="_blank">weights</a>]
+                            [<a href="" target="_blank">blog</a>]
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                                <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
+@article{tang2025compact,
+  author  = {Tang, Hao and Shen, Chengchao},
+  title   = {Learning Compact Vision Tokens for Efficient Large Multimodal Models},
+  year    = {2025},
+}
+                                </div>
+                            </div>  
+                            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                                <div class="abstract"  style="overflow: hidden; display: none;">  
+                                    <p>Large multimodal models (LMMs) suffer significant computational challenges due to the high cost of Large Language Models (LLMs) and the quadratic complexity of processing long vision token sequences. In this paper, we explore the spatial redundancy among vision tokens and shorten the length of vision token sequences for inference acceleration. Specifically, we propose a Spatial Token Fusion (STF) method to learn compact vision tokens for short vision token sequence, where spatial-adjacent tokens are fused into one. Meanwhile, weight-frozen vision encoder can not well adapt to the demand of extensive downstream vision-language tasks. To this end, we further introduce a Multi-Block Token Fusion (MBTF) module to supplement multi-granularity features for the reduced token sequence. Overall, we combine STC and MLTC module to balance token reduction and information preservation, thereby improving inference efficiency without sacrificing multimodal reasoning capabilities. Experimental results demonstrate that our method based on LLaVA-1.5 achieves comparable or even superior performance to the baseline on 8 popular vision-language benchmarks with only 25% vision tokens of baseline.</p>
+                                </div>
+                            </div>
+                             <img src="https://img.shields.io/github/stars/visresearch/LLaVA-STF.svg?style=social&amp;label=Star" alt="GitHub stars" 
+                                style="text-align:center;vertical-align:middle">
+                        </dd>
+                        
+                    </dl>
+                </div>
+
+                <div class="publication">
+                    <dl class="description">
                         <div class="figure"><img src="images/tang2025data.png" class="paper-image"></img></div>
                         <dt class="ptitle">Data-Efficient Multi-Scale Fusion Vision Transformer</dt>
                         <dd>Hao Tang, Dawei Liu, <b class='me'>Chengchao Shen*</b></dd>
@@ -113,35 +209,34 @@
 
                 <div class="publication">
                     <dl class="description">
-                        <div class="figure"><img src="images/tang2025compact.png" class="paper-image"></img></div>
-                        <dt class="ptitle">Learning Compact Vision Tokens for Efficient Large Multimodal Models</dt>
-                        <dd>Hao Tang, <b class='me'>Chengchao Shen</b></dd>
+                        <div class="figure"><img src="images/shen2025multiple.png" class="paper-image"></img></div>
+                        <dt class="ptitle">Multiple Object Stitching for Unsupervised Representation Learning</dt>
+                        <dd><b class='me'>Chengchao Shen</b>, Dawei Liu, Jianxin Wang</dd>
                         <dd>Arxiv, 2025</dd>
                         <dd>
                             [<a href="" target="_blank">arXiv</a>]
-                            [<a href="https://github.com/visresearch/LLaVA-STF" target="_blank">code</a>]
-                            [<a href="https://huggingface.co/visresearch/LLaVA-STF" target="_blank">weights</a>]
-                            [<a href="" target="_blank">blog</a>]
+                            [<a href="https://github.com/visresearch/MultipleObjectStitching" target="_blank">code</a>]
                             <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
                                 <div class="bibref pre-white-space"  style="overflow: hidden; display: none;">  
-@article{tang2025compact,
-  author  = {Tang, Hao and Shen, Chengchao},
-  title   = {Learning Compact Vision Tokens for Efficient Large Multimodal Models},
-  year    = {2025},
+@article{tang2025data,
+      title={Multiple Object Stitching for Unsupervised Representation Learning},
+      author={Shen, Chengchao and Liu, Dawei and Wang Jianxin},
+      year={2025}
 }
                                 </div>
                             </div>  
                             <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
                                 <div class="abstract"  style="overflow: hidden; display: none;">  
-                                    <p>Large multimodal models (LMMs) suffer significant computational challenges due to the high cost of Large Language Models (LLMs) and the quadratic complexity of processing long vision token sequences. In this paper, we explore the spatial redundancy among vision tokens and shorten the length of vision token sequences for inference acceleration. Specifically, we propose a Spatial Token Fusion (STF) method to learn compact vision tokens for short vision token sequence, where spatial-adjacent tokens are fused into one. Meanwhile, weight-frozen vision encoder can not well adapt to the demand of extensive downstream vision-language tasks. To this end, we further introduce a Multi-Block Token Fusion (MBTF) module to supplement multi-granularity features for the reduced token sequence. Overall, we combine STC and MLTC module to balance token reduction and information preservation, thereby improving inference efficiency without sacrificing multimodal reasoning capabilities. Experimental results demonstrate that our method based on LLaVA-1.5 achieves comparable or even superior performance to the baseline on 8 popular vision-language benchmarks with only 25% vision tokens of baseline.</p>
+                                    <p></p>
                                 </div>
-                            </div>
-<!--                             <img src="https://img.shields.io/github/stars/visresearch/patchmix.svg?style=social&amp;label=Star" alt="GitHub stars" -->
+                            </div> 
+                            <img src="https://img.shields.io/github/stars/visresearch/MultipleObjectStitching.svg?style=social&amp;label=Star" alt="GitHub stars"
                                 style="text-align:center;vertical-align:middle">
                         </dd>
                         
                     </dl>
                 </div>
+
                 
                 <div class="publication">
                     <dl class="description">
