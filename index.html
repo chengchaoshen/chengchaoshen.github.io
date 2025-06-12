@@ -26,7 +26,7 @@
                         <td width=20%>
                             <p style="text-align:center"><img src="./images/avatar.png" width=180px></p>
                         </td>
-                        <td width=50%>
+                        <td width=60%>
                             <p style="font-size: 18pt;"><b>Chengchao Shen</b> <b><span lang="zh-cn">沈成超</span></b></p>
 
                             <p>Associate Professor
@@ -36,7 +36,7 @@
                             <img src="./images/em.png" height=25px style="vertical-align: bottom;">
 
                             <p>
-                                <b>Research Interest</b>: Large Vision Model, Multimodal Learning, Unsupervised Learning, Model Acceleration, Zero/few-shot Learning
+                                <b>Research Interest</b>: Large Vision Model, Multimodal Learning, Large Language Model, Unsupervised Learning, Efficient Inference, Zero/Few-Shot Learning
                             </p>
 
                             <p>
@@ -47,7 +47,7 @@
                             
                         </td>
 
-                        <td width=30%>
+                        <td width=20%>
                             <p style="text-align:right;font-size: 18pt;""><a href="./index_cn.html" target="_blank"><font >[中文版]</font></a></p>
                             <div class="tocright"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
                                 <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none">
@@ -73,11 +73,26 @@
             <!-- --------------- Publications --------------- -->
             
             <div class="publications" id="publications">
-                <!-- <br> -->
-                <!-- <div class="title">Publications</div> -->
                 <h3 class="title">Publications</h3>
 
-                <div class="publication">
+                <!-- Filter Section -->
+                <div class="filter-section">
+                    <!-- <div class="filter-label">Filter by research areas:</div> -->
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-area="all">All</button>
+                        <button class="filter-btn" data-area="multimodal">Multimodal Learning</button>
+                        <button class="filter-btn" data-area="llm">LLM</button>
+                        <button class="filter-btn" data-area="efficiency">Efficiency</button>
+                        <button class="filter-btn" data-area="unsupervised">Unsupervised Learning</button>
+                        <button class="filter-btn" data-area="distillation">Distillation</button>
+                        <button class="filter-btn" data-area="transfer">Transfer Learning</button>
+                        <button class="filter-btn" data-area="zero-shot">Zero-Shot Learning</button>
+                        <button class="filter-btn" data-area="generation">Generation</button>
+                        <button class="filter-btn" data-area="federated">Federated Learning</button>
+                    </div>
+                </div>
+
+                <div class="publication" data-area="efficiency multimodal distillation">
                     <dl class="description">
                         <div class="figure"><img src="images/shen2025diversity.png" class="paper-image"></img></div>
                         <dt class="ptitle">Diversity-Guided MLP Reduction for Efficient Large Vision Transformers</dt>
@@ -110,7 +125,7 @@
                     </dl>
                 </div>
 
-                <div class="publication">
+                <div class="publication" data-area="efficiency distillation llm">
                     <dl class="description">
                         <div class="figure"><img src="images/zhu2025sdmprune.png" class="paper-image"></img></div>
                         <dt class="ptitle">SDMPrune: Self-Distillation MLP Pruning for Efficient Large Language Models</dt>
@@ -142,7 +157,7 @@
                     </dl>
                 </div>
 
-                <div class="publication">
+                <div class="publication" data-area="efficiency multimodal">
                     <dl class="description">
                         <div class="figure"><img src="images/tang2025compact.png" class="paper-image"></img></div>
                         <dt class="ptitle">Learning Compact Vision Tokens for Efficient Large Multimodal Models</dt>
@@ -175,7 +190,7 @@
                     </dl>
                 </div>
 
-                <div class="publication">
+                <div class="publication" data-area="efficiency">
                     <dl class="description">
                         <div class="figure"><img src="images/tang2025data.png" class="paper-image"></img></div>
                         <dt class="ptitle">Data-Efficient Multi-Scale Fusion Vision Transformer</dt>
@@ -209,7 +224,7 @@
                     </dl>
                 </div>
 
-                <div class="publication">
+                <div class="publication" data-area="unsupervised">
                     <dl class="description">
                         <div class="figure"><img src="images/shen2025multiple.png" class="paper-image"></img></div>
                         <dt class="ptitle">Multiple Object Stitching for Unsupervised Representation Learning</dt>
@@ -240,8 +255,7 @@
                     </dl>
                 </div>
 
-                
-                <div class="publication">
+                <div class="publication" data-area="unsupervised efficiency">
                     <dl class="description">
                         <div class="figure"><img src="images/shen2024multi.png" class="paper-image"></img></div>
                         <dt class="ptitle">Multi-Grained Contrast for Data-Efficient Unsupervised Representation Learning</dt>
@@ -277,7 +291,7 @@
                     </dl>
                 </div>
 
-                <div class="publication">
+                <div class="publication" data-area="unsupervised">
                     <dl class="description">
                         <div class="figure"><img src="images/shen2023inter.png" class="paper-image"></img></div>
                         <dt class="ptitle">Inter-Instance Similarity Modeling for Contrastive Learning</dt>
@@ -310,7 +324,7 @@
                     </dl>
                 </div>
 
-                <div class="publication">
+                <div class="publication" data-area="unsupervised">
                     <dl class="description">
                         <div class="figure"><img src="images/shen2023asymmetric.png" class="paper-image"></img></div>
                         <dt class="ptitle">Asymmetric Patch Sampling for Contrastive Learning</dt>
@@ -344,7 +358,7 @@
                     </dl>
                 </div>
 
-                <div class="publication">
+                <div class="publication" data-area="federated">
                     <dl class="description">
                         <div class="figure"><img src="images/sheng2023modeling.png" class="paper-image"></img></div>
                         <dt class="ptitle">Modeling Global Distribution for Federated Learning with Label Distribution Skew</dt>
@@ -378,7 +392,7 @@
                     </dl>
                 </div>
                                  
-                <div class="publication">
+                <div class="publication" data-area="generation">
                     <dl class="description">
                         <div class="figure"><img src="images/shen2021training.png" class="paper-image"></img></div>
                         <dt class="ptitle">Training Generative Adversarial Networks in One Stage</dt>
@@ -413,7 +427,7 @@
                     </dl>
                 </div>
 
-                <div class="publication">
+                <div class="publication" data-area="distillation">
                     <dl class="description">
                         <div class="figure"><img src="images/shen2021progressive.png" class="paper-image"></img></div>
                         <dt class="ptitle">Progressive Network Grafting for Few-Shot Knowledge Distillation</dt>
@@ -449,7 +463,7 @@
                     </dl>
                 </div>
 
-                <div class="publication">
+                <div class="publication" data-area="distillation">
                     <dl class="description">
                         <div class="figure"><img src="images/shen2019customizing.png" class="paper-image"></img></div>
                         <dt class="ptitle">Customizing Student Networks From Heterogeneous Teachers via Adaptive Knowledge Amalgamation</dt>
@@ -484,7 +498,7 @@
                     </dl>
                 </div>
 
-                <div class="publication">
+                <div class="publication" data-area="distillation">
                     <dl class="description">
                         <div class="figure"><img src="images/shen2019amalgamating.png" class="paper-image"></img></div>
                         <dt class="ptitle">Amalgamating Knowledge towards Comprehensive Classification</dt>
@@ -517,7 +531,7 @@
                     </dl>
                 </div>
 
-                <div class="publication">
+                <div class="publication" data-area="other">
                     <dl class="description">
                         <div class="figure"><img src="images/shen2018intra.png" class="paper-image"></img></div>
                         <dt class="ptitle">Intra-class Structure Aware Networks for Screen Defect Detection</dt>
@@ -539,7 +553,7 @@
                             </div>  
                             <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
                                 <div class="abstract"  style="overflow: hidden; display: none;">  
-                                    <p>Typically, screen defect detection treats different types of defects as a single category and ignores the large variation among them, which may pose large difficulty to the model learning and thus lead to inferior performance. In this paper, we propose a novel network model, called Intra-class Structure Aware Networks (ISANs), to alleviate the difficulty of learning one single concept which exhibits in various forms. The proposed model introduces more neural units for the “defect” category rather than a single one, to accommodate the large variations in this category, which can significantly improve the representation power. Regularized by prior distribution of intra-class variants, our approach can learn intra-class structure of screen defect without extra fine-grained labels. Experimental results demonstrate that ISANs can effectively discriminate intra-class variants and gain significant performance improvement on screen defect detection task as well as the classification task in MNIST.</p>
+                                    <p>Typically, screen defect detection treats different types of defects as a single category and ignores the large variation among them, which may pose large difficulty to the model learning and thus lead to inferior performance. In this paper, we propose a novel network model, called Intra-class Structure Aware Networks (ISANs), to alleviate the difficulty of learning one single concept which exhibits in various forms. The proposed model introduces more neural units for the "defect" category rather than a single one, to accommodate the large variations in this category, which can significantly improve the representation power. Regularized by prior distribution of intra-class variants, our approach can learn intra-class structure of screen defect without extra fine-grained labels. Experimental results demonstrate that ISANs can effectively discriminate intra-class variants and gain significant performance improvement on screen defect detection task as well as the classification task in MNIST.</p>
                                 </div>
                             </div>       
                         </dd>
@@ -547,7 +561,7 @@
                     </dl>
                 </div>
 
-                <div class="publication">
+                <div class="publication" data-area="zero-shot">
                     <dl class="description">
                         <div class="figure"><img src="images/song2018selective.png" class="paper-image"></img></div>
                         <dt class="ptitle">Selective Zero-Shot Classification With Augmented Attributes</dt>
@@ -576,7 +590,7 @@
                     </dl>
                 </div>
 
-                <div class="publication">
+                <div class="publication" data-area="zero-shot">
                     <dl class="description">
                         <div class="figure"><img src="images/song2018transductive.png" class="paper-image"></img></div>
                         <dt class="ptitle">Transductive Unbiased Embedding for Zero-Shot Learning</dt>
@@ -609,7 +623,7 @@
                     </dl>
                 </div>
 
-                <div class="publication">
+                <div class="publication" data-area="distillation generation">
                     <dl class="description">
                         <div class="figure"><img src="images/fang2021contrastive.png" class="paper-image"></img></div>
                         <dt class="ptitle">Contrastive Model Inversion for Data-Free Knowledge Distillation</dt>
@@ -641,8 +655,7 @@
                     </dl>
                 </div>
 
-
-                <div class="publication">
+                <div class="publication" data-area="distillation generation">
                     <dl class="description">
                         <div class="figure"><img src="images/fang2021mosaicking.png" class="paper-image"></img></div>
                         <dt class="ptitle">Mosaicking to Distill: Knowledge Distillation from Out-of-Domain Data</dt>
@@ -674,7 +687,7 @@
                     </dl>
                 </div>
 
-                <div class="publication">
+                <div class="publication" data-area="distillation generation">
                     <dl class="description">
                         <div class="figure"><img src="images/fang2019data.png" class="paper-image"></img></div>
                         <dt class="ptitle">Data-Free Adversarial Distillation</dt>
@@ -704,7 +717,7 @@
                     </dl>
                 </div>
 
-                <div class="publication">
+                <div class="publication" data-area="transfer">
                     <dl class="description">
                         <div class="figure"><img src="images/song2020depara.png" class="paper-image"></img></div>
                         <dt class="ptitle">DEPARA: Deep Attribution Graph for Deep Knowledge Transferability</dt>
@@ -737,7 +750,7 @@
                     </dl>
                 </div>
 
-                <div class="publication">
+                <div class="publication" data-area="transfer">
                     <dl class="description">
                         <div class="figure"><img src="images/song2019deep.png" class="paper-image"></img></div>
                         <dt class="ptitle">Deep Model Transferability from Attribution Maps</dt>

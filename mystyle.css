@@ -30,8 +30,8 @@ body {
     font-weight: bold;
     border-bottom:2px solid grey;
 
-    margin-top: 18px;
-    margin-bottom: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 ul{
@@ -177,14 +177,6 @@ body {
 .intro{
     width: 100%;
     margin-right:0;
-}
-
-.title{
-    font-size: 32px;
-    font-weight: bold;
-    border-bottom:2px solid grey;
-    margin-top: 18px;
-    margin-bottom: 18px;
 }
 
 ul{
@@ -369,4 +361,63 @@ dd {
     .dark .figure {
         border-color: #444;
     }
+}
+
+
+/* -------------------- Filter -------------------- */
+.filter-section {
+    background-color: #f8f9fa;
+    padding: 4px 6px;
+    border-radius: 6px;
+    margin: 6px 0 10px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.filter-label {
+    font-size: 0.85em;
+    color: #666;
+    font-weight: 500;
+    margin: 0;
+    white-space: nowrap;
+}
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: flex-start;
+    flex: 1;
+}
+.filter-btn {
+    margin: 0;
+    padding: 2px 8px;
+    border: 1px solid #dee2e6;
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 0.85em;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    color: #495057;
+    line-height: 1.5;
+}
+.filter-btn:hover {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+}
+.filter-btn.active {
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+    font-weight: 500;
+}
+.publication {
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+.publication.hidden {
+    display: none;
+    opacity: 0;
 }

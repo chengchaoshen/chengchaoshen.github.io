@@ -57,3 +57,32 @@ $(document).ready(function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            const area = this.getAttribute('data-area');
+            const publications = document.querySelectorAll('.publication');
+            
+            publications.forEach(pub => {
+                if (area === 'all') {
+                    pub.classList.remove('hidden');
+                } else {
+                    const areas = pub.getAttribute('data-area').split(' ');
+                    if (areas.includes(area)) {
+                        pub.classList.remove('hidden');
+                    } else {
+                        pub.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    });
+});
