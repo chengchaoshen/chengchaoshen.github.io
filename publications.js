@@ -143,16 +143,24 @@ const publicationFiles = [
 // Load and display publications
 async function loadPublications() {
     try {
-        let publicationsHtml = '';
+        // Create an array of promises for all fetch requests
+        const fetchPromises = publicationFiles.map(file => 
+            fetch(`./publications/${file}`)
+                .then(response => response.json())
+                .catch(error => {
+                    console.error(`Error loading ${file}:`, error);
+                    return null; // Return null for failed requests
+                })
+        );
         
-        // Load each publication JSON file
-        for (const file of publicationFiles) {
-            const pubResponse = await fetch(`./publications/${file}`);
-            const pubData = await pubResponse.json();
-            
-            // Generate HTML for the publication
-            publicationsHtml += generatePublicationHtml(pubData);
-        }
+        // Wait for all requests to complete in parallel
+        const publications = await Promise.all(fetchPromises);
+        
+        // Generate HTML for successfully loaded publications
+        const publicationsHtml = publications
+            .filter(pub => pub !== null) // Filter out failed requests
+            .map(pubData => generatePublicationHtml(pubData))
+            .join('');
         
         return publicationsHtml;
         
