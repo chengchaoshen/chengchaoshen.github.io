@@ -1,0 +1,39 @@
+{
+    "data_area": [
+        "transfer"
+    ],
+    "paper": {
+        "image": "images/song2020depara.png",
+        "title": "DEPARA: Deep Attribution Graph for Deep Knowledge Transferability",
+        "authors": [
+            "Jie Song",
+            "Yixin Chen",
+            "Jingwen Ye",
+            "Xinchao Wang",
+            {
+                "name": "Chengchao Shen",
+                "is_me": true
+            },
+            "Feng Mao",
+            "Mingli Song"
+        ],
+        "venue": {
+            "name": "The IEEE Conference on Computer Vision and Pattern Recognition",
+            "short_name": "CVPR",
+            "ranking": "CCF A",
+            "year": 2020
+        },
+        "links": {
+            "paper": "https://openaccess.thecvf.com/content_CVPR_2020/papers/Song_DEPARA_Deep_Attribution_Graph_for_Deep_Knowledge_Transferability_CVPR_2020_paper.pdf",
+            "arxiv": "http://arxiv.org/abs/2003.07496",
+            "supplementary": "https://openaccess.thecvf.com/content_CVPR_2020/supplemental/Song_DEPARA_Deep_Attribution_CVPR_2020_supplemental.pdf",
+            "code": "https://github.com/zju-vipa/DEPARA"
+        },
+        "bibtex": "\n@inproceedings{song2020depara,\n    title={Depara: Deep attribution graph for deep knowledge transferability},\n    author={Song, Jie and Chen, Yixin and Ye, Jingwen and Wang, Xinchao and Shen, Chengchao and Mao, Feng and Song, Mingli},\n    booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n    pages={3922--3930},\n    year={2020}\n}\n",
+        "abstract": "Exploring the intrinsic interconnections between the knowledge encoded in PRe-trained Deep Neural Networks (PR-DNNs) of heterogeneous tasks sheds light on their mutual transferability, and consequently enables knowledge transfer from one task to another so as to reduce the training effort of the latter. In this paper, we propose the DEeP Attribution gRAph (DEPARA) to investigate the transferability of knowledge learned from PR-DNNs. In DEPARA, nodes correspond to the inputs and are represented by their vectorized attribution maps with regards to the outputs of the PR-DNN. Edges denote the relatedness between inputs and are measured by the similarity of their features extracted from the PR-DNN. The knowledge transferability of two PR-DNNs is measured by the similarity of their corresponding DEPARAs. We apply DEPARA to two important yet under-studied problems in transfer learning: pre-trained model selection and layer selection. Extensive experiments are conducted to demonstrate the effectiveness and superiority of the proposed method in solving both these problems.",
+        "github": {
+            "user": "zju-vipa",
+            "repo": "DEPARA"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "data_area": [
+        "unsupervised"
+    ],
+    "paper": {
+        "image": "images/shen2025multiple.png",
+        "title": "Multiple Object Stitching for Unsupervised Representation Learning",
+        "authors": [
+            {
+                "name": "Chengchao Shen",
+                "is_me": true
+            },
+            "Dawei Liu",
+            "Jianxin Wang"
+        ],
+        "venue": {
+            "name": "Arxiv",
+            "short_name": "",
+            "ranking": "",
+            "year": 2025
+        },
+        "links": {
+            "arxiv": "https://arxiv.org/abs/2506.07364",
+            "code": "https://github.com/visresearch/MultipleObjectStitching"
+        },
+        "bibtex": "\n@article{tang2025data,\n    title={Multiple Object Stitching for Unsupervised Representation Learning},\n    author={Shen, Chengchao and Liu, Dawei and Wang Jianxin},\n    journal = {arXiv preprint arXiv:2506.07364},\n    year={2025}\n}\n",
+        "abstract": "Contrastive learning for single object centric images has achieved remarkable progress on unsupervised representation, but suffering inferior performance on the widespread images with multiple objects. In this paper, we propose a simple but effective method, Multiple Object Stitching (MOS), to refine the unsupervised representation for multi-object images. Specifically, we construct the multi-object images by stitching the single object centric ones, where the objects in the synthesized multi-object images are predetermined. Hence, compared to the existing contrastive methods, our method provides additional object correspondences between multi-object images without human annotations. In this manner, our method pays more attention to the representations of each object in multi-object image, thus providing more detailed representations for complicated downstream tasks, such as object detection and semantic segmentation. Experimental results on ImageNet, CIFAR and COCO datasets demonstrate that our proposed method achieves the leading unsupervised representation performance on both single object centric images and multi-object ones.",
+        "github": {
+            "user": "visresearch",
+            "repo": "MultipleObjectStitching"
+        }
+    }
+}

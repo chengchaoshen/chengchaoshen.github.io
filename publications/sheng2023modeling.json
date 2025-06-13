@@ -1,0 +1,39 @@
+{
+    "data_area": [
+        "federated"
+    ],
+    "paper": {
+        "image": "images/sheng2023modeling.png",
+        "title": "Modeling Global Distribution for Federated Learning with Label Distribution Skew",
+        "authors": [
+            "Tao Sheng",
+            {
+                "name": "Chengchao Shen",
+                "is_me": true
+            },
+            "Yuan Liu",
+            "Yeyu Ou",
+            "Zhe Qu",
+            "Yixiong Liang",
+            "Jianxin Wang"
+        ],
+        "venue": {
+            "name": "Pattern Recognition",
+            "short_name": "",
+            "ranking": "",
+            "year": 2023,
+            "impact_factor": 8.5
+        },
+        "links": {
+            "paper": "https://www.sciencedirect.com/science/article/pii/S0031320323004223",
+            "arxiv": "https://arxiv.org/abs/2212.08883",
+            "code": "https://github.com/Sheng-T/FedMGD"
+        },
+        "bibtex": "\n@article{sheng2023modeling,\n    author    = {Sheng, Tao and Shen, Chengchao and Liu, Yuan and Ou, Yeyu and Qu, Zhe and Wang, Jianxin},\n    title     = {Modeling Global Distribution for Federated Learning with Label Distribution Skew},\n    journal   = {Pattern Recognition},\n    volume = {143},\n    pages = {109724},\n    year      = {2023}\n}\n",
+        "abstract": "Federated learning achieves joint training of deep models by connecting decentralized data sources, which can significantly mitigate the risk of privacy leakage. However, in a more general case, the distributions of labels among clients are different, called ``label distribution skew''. Directly applying conventional federated learning without consideration of label distribution skew issue significantly hurts the performance of the global model. To this end, we propose a novel federated learning method, named FedMGD, to alleviate the performance degradation caused by the label distribution skew issue. It introduces a global Generative Adversarial Network to model the global data distribution without access to local datasets, so the global model can be trained using the global information of data distribution without privacy leakage. The experimental results demonstrate that our proposed method significantly outperforms the state-of-the-art on several public benchmarks.",
+        "github": {
+            "user": "Sheng-T",
+            "repo": "FedMGD"
+        }
+    }
+}

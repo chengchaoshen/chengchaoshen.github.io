@@ -1,0 +1,30 @@
+{
+    "data_area": [
+        "other"
+    ],
+    "paper": {
+        "image": "images/shen2018intra.png",
+        "title": "Intra-class Structure Aware Networks for Screen Defect Detection",
+        "authors": [
+            {
+                "name": "Chengchao Shen",
+                "is_me": true
+            },
+            "Jie Song",
+            "Sihui Luo",
+            "Li Sun",
+            "Mingli Song"
+        ],
+        "venue": {
+            "name": "International Conference on Neural Information Processing",
+            "short_name": "ICONIP",
+            "ranking": "CCF C",
+            "year": 2018
+        },
+        "links": {
+            "paper": "https://link.springer.com/chapter/10.1007/978-3-030-04212-7_42"
+        },
+        "bibtex": "\n@inproceedings{shen2018intra,\n    title={Intra-class Structure Aware Networks for Screen Defect Detection},\n    author={Shen, Chengchao and Song, Jie and Song, Shuyi and Luo, Sihui and Sun, Li and Song, Mingli},\n    booktitle={International Conference on Neural Information Processing (ICONIP)},\n    pages={476--485},\n    year={2018},\n    organization={Springer}\n}\n",
+        "abstract": "Typically, screen defect detection treats different types of defects as a single category and ignores the large variation among them, which may pose large difficulty to the model learning and thus lead to inferior performance. In this paper, we propose a novel network model, called Intra-class Structure Aware Networks (ISANs), to alleviate the difficulty of learning one single concept which exhibits in various forms. The proposed model introduces more neural units for the \"defect\" category rather than a single one, to accommodate the large variations in this category, which can significantly improve the representation power. Regularized by prior distribution of intra-class variants, our approach can learn intra-class structure of screen defect without extra fine-grained labels. Experimental results demonstrate that ISANs can effectively discriminate intra-class variants and gain significant performance improvement on screen defect detection task as well as the classification task in MNIST."
+    }
+}

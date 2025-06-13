@@ -5,6 +5,7 @@
         
         <script type="text/javascript" src="./jquery.min.js"></script>
         <script type="text/javascript" src="./myfunc.js"></script>
+        <script type="text/javascript" src="./publications.js"></script>
 
         <link rel="stylesheet" type="text/css" href="./mystyle.css">
 
@@ -94,15 +95,18 @@
                 </div>
 
                 <script>
-                    // Load publications content
-                    fetch('publications.html')
-                        .then(response => response.text())
-                        .then(data => {
-                            document.getElementById('publications-content').innerHTML = data;
-                        })
-                        .catch(error => {
+                    // Wait for DOM content to load
+                    document.addEventListener('DOMContentLoaded', function() {
+                        loadPublications().then(html => {
+                            document.getElementById('publications-content').innerHTML = html;
+                            // Initialize filters and modal after content is loaded
+                            initializeFilters();
+                            initializeImageModal();
+                        }).catch(error => {
                             console.error('Error loading publications:', error);
+                            document.getElementById('publications-content').innerHTML = 'Error loading publications';
                         });
+                    });
                 </script>
 
             <!-- ---------------- Education ---------------- -->

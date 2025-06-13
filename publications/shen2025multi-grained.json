@@ -1,0 +1,37 @@
+{
+    "data_area": [
+        "unsupervised",
+        "efficiency"
+    ],
+    "paper": {
+        "image": "images/shen2024multi.png",
+        "title": "Multi-Grained Contrast for Data-Efficient Unsupervised Representation Learning",
+        "authors": [
+            {
+                "name": "Chengchao Shen",
+                "is_me": true
+            },
+            "Jianzhong Chen",
+            "Jianxin Wang"
+        ],
+        "venue": {
+            "name": "Pattern Recognition",
+            "short_name": "",
+            "ranking": "",
+            "year": 2025,
+            "impact_factor": 7.5
+        },
+        "links": {
+            "paper": "https://www.sciencedirect.com/science/article/pii/S0031320325003152",
+            "arxiv": "https://arxiv.org/abs/2407.02014",
+            "code": "https://github.com/visresearch/mgc",
+            "blog": "https://zhuanlan.zhihu.com/p/708880336"
+        },
+        "bibtex": "\n@article{shen2025multi,\n    author  = {Shen, Chengchao and Chen, Jianzhong and Wang, Jianxin},\n    title   = {Multi-Grained Contrast for Data-Efficient Unsupervised Representation Learning},\n    journal = {Pattern Recognition},\n    pages = {111655},\n    year = {2025},\n}\n",
+        "abstract": "The existing contrastive learning methods mainly focus on single-grained representation learning, e.g., part-level, object-level or scene-level ones, thus inevitably neglecting the transferability of representations on other granularity levels. In this paper, we aim to learn multi-grained representations, which can effectively describe the image on various granularity levels, thus improving generalization on extensive downstream tasks. To this end, we propose a novel Multi-Grained Contrast method (MGC) for unsupervised representation learning. Specifically, we construct delicate multi-grained correspondences between positive views and then conduct multi-grained contrast by the correspondences to learn more general unsupervised representations. Without pretrained on large-scale dataset, our method significantly outperforms the existing state-of-the-art methods on extensive downstream tasks, including object detection, instance segmentation, scene parsing, semantic segmentation and keypoint detection. Moreover, experimental results support the data-efficient property and excellent representation transferability of our method.",
+        "github": {
+            "user": "visresearch",
+            "repo": "mgc"
+        }
+    }
+}

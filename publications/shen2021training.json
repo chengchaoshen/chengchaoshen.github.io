@@ -1,0 +1,38 @@
+{
+    "data_area": [
+        "generation"
+    ],
+    "paper": {
+        "image": "images/shen2021training.png",
+        "title": "Training Generative Adversarial Networks in One Stage",
+        "authors": [
+            {
+                "name": "Chengchao Shen",
+                "is_me": true
+            },
+            "Youtan Yin",
+            "Xinchao Wang",
+            "Xubin Li",
+            "Jie Song",
+            "Mingli Song"
+        ],
+        "venue": {
+            "name": "The IEEE Conference on Computer Vision and Pattern Recognition",
+            "short_name": "CVPR",
+            "ranking": "CCF A",
+            "year": 2021
+        },
+        "links": {
+            "paper": "https://openaccess.thecvf.com/content/CVPR2021/papers/Shen_Training_Generative_Adversarial_Networks_in_One_Stage_CVPR_2021_paper.pdf",
+            "supplementary": "https://openaccess.thecvf.com/content/CVPR2021/supplemental/Shen_Training_Generative_Adversarial_CVPR_2021_supplemental.pdf",
+            "arxiv": "http://arxiv.org/abs/2103.00430",
+            "code": "https://github.com/zju-vipa/OSGAN"
+        },
+        "bibtex": "\n@inproceedings{shen2021training,\n    author    = {Shen, Chengchao and Yin, Youtan and Wang, Xinchao and Li, Xubin and Song, Jie and Song, Mingli},\n    title     = {Training Generative Adversarial Networks in One Stage},\n    booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n    month     = {June},\n    year      = {2021},\n    pages     = {3350--3360}\n}\n",
+        "abstract": "Generative Adversarial Networks (GANs) have demonstrated unprecedented success in various image generation tasks. The encouraging results, however, come at the price of a cumbersome training process, during which the generator and discriminator are alternately updated in two stages. In this paper, we investigate a general training scheme that enables training GANs efficiently in only one stage. Based on the adversarial losses of the generator and discriminator, we categorize GANs into two classes, Symmetric GANs and Asymmetric GANs, and introduce a novel gradient decomposition method to unify the two, allowing us to train both classes in one stage and hence alleviate the training effort. We also computationally analyze the efficiency of the proposed method, and empirically demonstrate that, the proposed method yields a solid 1.5× acceleration across various datasets and network architectures. Furthermore, we show that the proposed method is readily applicable to other adversarial-training scenarios, such as data-free knowledge distillation.",
+        "github": {
+            "user": "zju-vipa",
+            "repo": "OSGAN"
+        }
+    }
+}

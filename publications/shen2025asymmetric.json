@@ -1,0 +1,38 @@
+{
+    "data_area": [
+        "unsupervised"
+    ],
+    "paper": {
+        "image": "images/shen2023asymmetric.png",
+        "title": "Asymmetric Patch Sampling for Contrastive Learning",
+        "authors": [
+            {
+                "name": "Chengchao Shen",
+                "is_me": true
+            },
+            "Jianzhong Chen",
+            "Shu Wang",
+            "Hulin Kuang",
+            "Jin Liu",
+            "Jianxin Wang"
+        ],
+        "venue": {
+            "name": "Pattern Recognition",
+            "short_name": "",
+            "ranking": "",
+            "year": 2025,
+            "impact_factor": 7.5
+        },
+        "links": {
+            "paper": "https://www.sciencedirect.com/science/article/pii/S0031320324007635",
+            "arxiv": "https://arxiv.org/abs/2306.02854",
+            "code": "https://github.com/visresearch/aps"
+        },
+        "bibtex": "\n@article{shen2025asymmetric,\n    title={Asymmetric Patch Sampling for Contrastive Learning}, \n    author={Shen, Chengchao and Chen, Jianzhong and Wang, Shu and Kuang, Hulin and Liu, Jin and Wang, Jianxin},\n    journal={Pattern Recognition},\n    volume = {158},\n    pages = {111012},\n    year={2025}\n}\n",
+        "abstract": "Asymmetric appearance between positive pair effectively reduces the risk of representation degradation in contrastive learning. However, there are still a mass of appearance similarities between positive pair constructed by the existing methods, which inhibits the further representation improvement. In this paper, we propose a novel asymmetric patch sampling strategy for contrastive learning, to further boost the appearance asymmetry for better representations. Specifically, dual patch sampling strategies are applied to the given image, to obtain asymmetric positive pairs. First, sparse patch sampling is conducted to obtain the first view, which reduces spatial redundancy of image and allows a more asymmetric view. Second, a selective patch sampling is proposed to construct another view with large appearance discrepancy relative to the first one. Due to the inappreciable appearance similarity between positive pair, the trained model is encouraged to capture the similarity on semantics, instead of low-level ones. Experimental results demonstrate that our proposed method significantly outperforms the existing self-supervised methods on both ImageNet-1K and CIFAR dataset, e.g., 2.5% finetune accuracy improvement on CIFAR100. Furthermore, our method achieves state-of-the-art performance on downstream tasks, object detection and instance segmentation on COCO. Additionally, compared to other self-supervised methods, our method is more efficient on both memory and computation during training.",
+        "github": {
+            "user": "visresearch",
+            "repo": "aps"
+        }
+    }
+}
