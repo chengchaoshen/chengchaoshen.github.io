@@ -21,7 +21,7 @@
             "year": 2025
         },
         "links": {
-            "arxiv": "",
+            "arxiv": "https://arxiv.org/abs/2506.11120",
             "code": "https://github.com/visresearch/SDMPrune"
         },
         "bibtex": "\n@article{zhu2025sdmprune,\n    author  = {Zhu, Hourun and Shen, Chengchao},\n    title   = {SDMPrune: Self-Distillation MLP Pruning for Efficient Large Language Models},\n    year    = {2025},\n}\n",
