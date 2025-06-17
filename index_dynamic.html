@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <script type="text/javascript" src="./jquery.min.js"></script>
+        <script type="text/javascript" src="./myfunc.js"></script>
+        <script type="text/javascript" src="./publications.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="./mystyle.css">
+
+        <title>Chengchao Shen's Homepage</title>
+    </head>
+
+    <!-- Modal for image zoom -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <body>
+        <div class="container">
+            <!-- --------------- Introduction --------------- -->
+            <table class="intro">
+                <tbody>
+                    <tr>
+                        <td width=20%>
+                            <p style="text-align:center"><img src="./images/avatar.png" width=180px></p>
+                        </td>
+                        <td width=60%>
+                            <p style="font-size: 18pt;"><b>Chengchao Shen</b> <b><span lang="zh-cn">沈成超</span></b></p>
+
+                            <p>Associate Professor
+                                <br>
+                                School of Computer Science and Engineering, Central South University</p>
+
+                            <img src="./images/em.png" height=25px style="vertical-align: bottom;">
+
+                            <p>
+                                <b>Research Interest</b>: Large Vision Model, Multimodal Learning, Large Language Model, Unsupervised Learning, Efficient Inference, Zero/Few-Shot Learning
+                            </p>
+
+                            <p>
+                                [<a href="https://scholar.google.com/citations?user=lQ8tqZ4AAAAJ" target="_blank">Google Scholar</a>] 
+                                [<a href="https://dblp.org/pid/217/3551"  target="_blank">DBLP</a>] 
+                                [<a href="https://github.com/visresearch" target="_blank">Github</a>] 
+                            </p>
+                            
+                        </td>
+
+                        <td width=20%>
+                            <p style="text-align:right;font-size: 18pt;""><a href="./index_cn.html" target="_blank"><font >[中文版]</font></a></p>
+                            <div class="tocright"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+                                <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none">
+                                <div class="toctitle" lang="en" dir="ltr">
+                                    <!-- <h2 id="mw-toc-heading">Contents</h2> -->
+                                    <div id="mw-toc-heading"><b>Contents</b></div>
+                                    <span class="toctogglespan"
+                                        <label class="toctogglelabel" for="toctogglecheckbox"></label>
+                                    </span>
+                                </div>
+                                <ul>
+                                    <li class="toclevel-1 tocsection-2"><a href="#publications"><span class="tocnumber">1.</span> <span class="toctext">Publications</span></a></li>
+                                    <!-- <li class="toclevel-1 tocsection-1"><a href="#education"><span class="tocnumber">2.</span> <span class="toctext">Education</span></a></li> -->
+                                    <li class="toclevel-1 tocsection-3"><a href="#services"><span class="tocnumber">2.</span> <span class="toctext">Academic Services</span></a></li>
+                                </ul>
+                            </div>
+                            <br><br><br><br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- --------------- Publications --------------- -->
+            
+            <div class="publications" id="publications">
+                <h3 class="title">Publications</h3>
+
+                <!-- Filter Section -->
+                <div class="filter-section">
+                    <!-- <div class="filter-label">Filter by research areas:</div> -->
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-area="all">All</button>
+                        <button class="filter-btn" data-area="multimodal">Multimodal Learning</button>
+                        <button class="filter-btn" data-area="llm">LLM</button>
+                        <button class="filter-btn" data-area="efficiency">Efficiency</button>
+                        <button class="filter-btn" data-area="unsupervised">Unsupervised Learning</button>
+                        <button class="filter-btn" data-area="distillation">Distillation</button>
+                        <button class="filter-btn" data-area="transfer">Transfer Learning</button>
+                        <button class="filter-btn" data-area="zero-shot">Zero-Shot Learning</button>
+                        <button class="filter-btn" data-area="generation">Generation</button>
+                        <button class="filter-btn" data-area="federated">Federated Learning</button>
+                    </div>
+                </div>
+                
+                <div id="publications-content">
+                    <!-- Publications will be loaded here -->
+                </div>
+
+                <script>
+                    // Wait for DOM content to load
+                    document.addEventListener('DOMContentLoaded', function() {
+                        loadPublications().then(html => {
+                            document.getElementById('publications-content').innerHTML = html;
+                            // Initialize filters and modal after content is loaded
+                            initializeFilters();
+                            initializeImageModal();
+                        }).catch(error => {
+                            console.error('Error loading publications:', error);
+                            document.getElementById('publications-content').innerHTML = 'Error loading publications';
+                        });
+                    });
+                </script>
+
+            </div>
+
+            <!-- ---------------- Education ---------------- -->
+            <!--
+            <div class="education" id="education">
+                <h3 class="title">Education</h3>
+
+                <ul>
+                    <li>2016.09 - 2021.06, PhD, Computer Science and Technology, Zhejiang University</li>
+                </ul>
+                
+            </div>
+            -->
+            <!-- ----------------- Services ----------------- -->
+            <div class="services" id="services">
+                <h3 class="title">Academic Services</h3>
+                <!-- <b style="font-size: 20px;">Conference Reviewer</b>: -->
+                <b style="font-size: 20px;">Program Committee</b>:
+                <!-- <h4 style="font-size: 20px; padding-top: -10px;">Program Committee: </b> -->
+                <ul>
+                    <li>The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</li>
+                    <li>The IEEE International Conference on Computer Vision (ICCV)</li>
+                    <li>The European Conference on Computer Vision (ECCV)</li>
+                    <li>AAAI Conference on Artificial Intelligence (AAAI)</li>
+                    <li>Advances in Neural Information Processing Systems (NeurIPS)</li>
+                    <li>International Conference on Learning Representations (ICLR)</li>
+                    <li>International Conference on Machine Learning (ICML)</li>
+                    <li>International Joint Conference on Artificial Intelligence (IJCAI)</li>
+                    <li>The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD)</li>
+                    <li>The European Conference on Artificial Intelligence (ECAI)</li>
+                </ul>
+
+                <b style="font-size: 20px;">Journal Reviewer</b>:
+                <ul>
+                    <li>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</li>
+                    <li>IEEE Transactions on Image Processing (TIP)</li>
+                    <li>IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</li>
+                    <li>Machine Learning</li>
+                </ul>
+
+            </div>
+
+            
+
+    </div>
+
+        
+    <br>
+    <br>
+    </body>
+
+</html>

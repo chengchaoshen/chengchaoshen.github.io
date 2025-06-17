@@ -1,121 +1,662 @@
 <!DOCTYPE html>
+
 <html>
-    <head>
-        <meta charset="utf-8">
-        
-        <script type="text/javascript" src="./jquery.min.js"></script>
-        <script type="text/javascript" src="./myfunc.js"></script>
-        <script type="text/javascript" src="./publications.js"></script>
-
-        <link rel="stylesheet" type="text/css" href="./mystyle.css">
-
-        <title>Chengchao Shen's Homepage</title>
-    </head>
-
-    <!-- Modal for image zoom -->
-    <div id="imageModal" class="modal">
-        <span class="close-modal">&times;</span>
-        <img class="modal-content" id="modalImage">
-    </div>
-
-    <body>
-        <div class="container">
-            <!-- --------------- Introduction --------------- -->
-            <table class="intro">
-                <tbody>
-                    <tr>
-                        <td width=20%>
-                            <p style="text-align:center"><img src="./images/avatar.png" width=180px></p>
-                        </td>
-                        <td width=60%>
-                            <p style="font-size: 18pt;"><b>Chengchao Shen</b> <b><span lang="zh-cn">沈成超</span></b></p>
-
-                            <p>Associate Professor
-                                <br>
+<head>
+<meta charset="utf-8"/>
+<script src="./jquery.min.js" type="text/javascript"></script>
+<script src="./myfunc.js" type="text/javascript"></script>
+<script src="./publications.js" type="text/javascript"></script>
+<link href="./mystyle.css" rel="stylesheet" type="text/css"/>
+<title>Chengchao Shen's Homepage</title>
+</head>
+<!-- Modal for image zoom -->
+<div class="modal" id="imageModal">
+<span class="close-modal">×</span>
+<img class="modal-content" id="modalImage"/>
+</div>
+<body>
+<div class="container">
+<!-- --------------- Introduction --------------- -->
+<table class="intro">
+<tbody>
+<tr>
+<td width="20%">
+<p style="text-align:center"><img src="./images/avatar.png" width="180px"/></p>
+</td>
+<td width="60%">
+<p style="font-size: 18pt;"><b>Chengchao Shen</b> <b><span lang="zh-cn">沈成超</span></b></p>
+<p>Associate Professor
+                                <br/>
                                 School of Computer Science and Engineering, Central South University</p>
-
-                            <img src="./images/em.png" height=25px style="vertical-align: bottom;">
-
-                            <p>
-                                <b>Research Interest</b>: Large Vision Model, Multimodal Learning, Large Language Model, Unsupervised Learning, Efficient Inference, Zero/Few-Shot Learning
+<img height="25px" src="./images/em.png" style="vertical-align: bottom;"/>
+<p>
+<b>Research Interest</b>: Large Vision Model, Multimodal Learning, Large Language Model, Unsupervised Learning, Efficient Inference, Zero/Few-Shot Learning
                             </p>
-
-                            <p>
+<p>
                                 [<a href="https://scholar.google.com/citations?user=lQ8tqZ4AAAAJ" target="_blank">Google Scholar</a>] 
-                                [<a href="https://dblp.org/pid/217/3551"  target="_blank">DBLP</a>] 
+                                [<a href="https://dblp.org/pid/217/3551" target="_blank">DBLP</a>] 
                                 [<a href="https://github.com/visresearch" target="_blank">Github</a>] 
                             </p>
-                            
-                        </td>
-
-                        <td width=20%>
-                            <p style="text-align:right;font-size: 18pt;""><a href="./index_cn.html" target="_blank"><font >[中文版]</font></a></p>
-                            <div class="tocright"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
-                                <input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none">
-                                <div class="toctitle" lang="en" dir="ltr">
-                                    <!-- <h2 id="mw-toc-heading">Contents</h2> -->
-                                    <div id="mw-toc-heading"><b>Contents</b></div>
-                                    <span class="toctogglespan"
-                                        <label class="toctogglelabel" for="toctogglecheckbox"></label>
-                                    </span>
-                                </div>
-                                <ul>
-                                    <li class="toclevel-1 tocsection-2"><a href="#publications"><span class="tocnumber">1.</span> <span class="toctext">Publications</span></a></li>
-                                    <!-- <li class="toclevel-1 tocsection-1"><a href="#education"><span class="tocnumber">2.</span> <span class="toctext">Education</span></a></li> -->
-                                    <li class="toclevel-1 tocsection-3"><a href="#services"><span class="tocnumber">2.</span> <span class="toctext">Academic Services</span></a></li>
-                                </ul>
-                            </div>
-                            <br><br><br><br>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <!-- --------------- Publications --------------- -->
-            
-            <div class="publications" id="publications">
-                <h3 class="title">Publications</h3>
-
-                <!-- Filter Section -->
-                <div class="filter-section">
-                    <!-- <div class="filter-label">Filter by research areas:</div> -->
-                    <div class="filter-buttons">
-                        <button class="filter-btn active" data-area="all">All</button>
-                        <button class="filter-btn" data-area="multimodal">Multimodal Learning</button>
-                        <button class="filter-btn" data-area="llm">LLM</button>
-                        <button class="filter-btn" data-area="efficiency">Efficiency</button>
-                        <button class="filter-btn" data-area="unsupervised">Unsupervised Learning</button>
-                        <button class="filter-btn" data-area="distillation">Distillation</button>
-                        <button class="filter-btn" data-area="transfer">Transfer Learning</button>
-                        <button class="filter-btn" data-area="zero-shot">Zero-Shot Learning</button>
-                        <button class="filter-btn" data-area="generation">Generation</button>
-                        <button class="filter-btn" data-area="federated">Federated Learning</button>
-                    </div>
-                </div>
-                
-                <div id="publications-content">
-                    <!-- Publications will be loaded here -->
-                </div>
-
-                <script>
+</td>
+<td width="20%">
+<p "="" style="text-align:right;font-size: 18pt;"><a href="./index_cn.html" target="_blank"><font>[中文版]</font></a></p>
+<div class="tocright"><div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation">
+<input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/>
+<div class="toctitle" dir="ltr" lang="en">
+<!-- <h2 id="mw-toc-heading">Contents</h2> -->
+<div id="mw-toc-heading"><b>Contents</b></div>
+<span <label="" class="toctogglelabel" for="toctogglecheckbox">
+</span>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-2"><a href="#publications"><span class="tocnumber">1.</span> <span class="toctext">Publications</span></a></li>
+<!-- <li class="toclevel-1 tocsection-1"><a href="#education"><span class="tocnumber">2.</span> <span class="toctext">Education</span></a></li> -->
+<li class="toclevel-1 tocsection-3"><a href="#services"><span class="tocnumber">2.</span> <span class="toctext">Academic Services</span></a></li>
+</ul>
+</div>
+<br/><br/><br/><br/>
+</div></td>
+</tr>
+</tbody>
+</table>
+<!-- --------------- Publications --------------- -->
+<div class="publications" id="publications">
+<h3 class="title">Publications</h3>
+<!-- Filter Section -->
+<div class="filter-section">
+<!-- <div class="filter-label">Filter by research areas:</div> -->
+<div class="filter-buttons">
+<button class="filter-btn active" data-area="all">All</button>
+<button class="filter-btn" data-area="multimodal">Multimodal Learning</button>
+<button class="filter-btn" data-area="llm">LLM</button>
+<button class="filter-btn" data-area="efficiency">Efficiency</button>
+<button class="filter-btn" data-area="unsupervised">Unsupervised Learning</button>
+<button class="filter-btn" data-area="distillation">Distillation</button>
+<button class="filter-btn" data-area="transfer">Transfer Learning</button>
+<button class="filter-btn" data-area="zero-shot">Zero-Shot Learning</button>
+<button class="filter-btn" data-area="generation">Generation</button>
+<button class="filter-btn" data-area="federated">Federated Learning</button>
+</div>
+</div>
+<div id="publications-content">
+<div class="publication" data-area="efficiency multimodal distillation">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/shen2025diversity.png"/></div>
+<dt class="ptitle">Diversity-Guided MLP Reduction for Efficient Large Vision Transformers</dt>
+<dd><b class="me">Chengchao Shen</b>, Hourun Zhu, Gongfan Fang, Jianxin Wang, Xinchao Wang</dd>
+<dd>Arxiv, 2025</dd>
+<dd>
+                    [<a href="https://arxiv.org/abs/2506.08591" target="_blank">arXiv</a>] [<a href="https://github.com/visresearch/DGMR" target="_blank">code</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@article{shen2025diversity,
+    author  = {Shen, Chengchao, Zhu, Hourun and Fang, Gongfan and Wang, Jianxin and Wang, Xinchao},
+    title   = {Diversity-Guided MLP Reduction for Efficient Large Vision Transformers},
+    journal = {arXiv preprint arXiv:2506.07138},
+    year    = {2025},
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>Transformer models achieve excellent scaling property, where the performance is improved with the increment of model capacity. However, large-scale model parameters lead to an unaffordable cost of computing and memory. We analyze popular transformer architectures and find that multilayer perceptron (MLP) modules take up the majority of model parameters. To this end, we focus on the recoverability of the compressed models and propose a Diversity-Guided MLP Reduction (DGMR) method to significantly reduce the parameters of large vision transformers with only negligible performance degradation. Specifically, we conduct a Gram-Schmidt weight pruning strategy to eliminate redundant neurons of MLP hidden layer, while preserving weight diversity for better performance recover during distillation. Compared to the model trained from scratch, our pruned model only requires 0.06% data of LAION-2B (for the training of large vision transformers) without labels (ImageNet-1K) to recover the original performance. Experimental results on several state-of-the-art large vision transformers demonstrate that our method achieves a more than 57.0% parameter and FLOPs reduction in a near lossless manner. Notably, for EVA-CLIP-E (4.4B), our method accomplishes a 71.5% parameter and FLOPs reduction without performance degradation.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/visresearch/DGMR.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="efficiency distillation llm">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/zhu2025sdmprune.png"/></div>
+<dt class="ptitle">SDMPrune: Self-Distillation MLP Pruning for Efficient Large Language Models</dt>
+<dd>Hourun Zhu, <b class="me">Chengchao Shen*</b></dd>
+<dd>Arxiv, 2025</dd>
+<dd>
+                    [<a href="https://arxiv.org/abs/2506.11120" target="_blank">arXiv</a>] [<a href="https://github.com/visresearch/SDMPrune" target="_blank">code</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@article{zhu2025sdmprune,
+    author  = {Zhu, Hourun and Shen, Chengchao},
+    title   = {SDMPrune: Self-Distillation MLP Pruning for Efficient Large Language Models},
+    journal = {arXiv preprint arXiv:2506.11120},
+    year    = {2025},
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>In spite of strong performance achieved by LLMs, the costs of their deployment are unaffordable. For the compression of LLMs, gradient-based pruning methods present promising effectiveness. However, in these methods, the gradient computation with one-hot labels ignore the potential predictions on other words, thus missing key information for generative capability of the original model. To address this issue, we introduce a self-distillation loss during the pruning phase (rather than post-training) to fully exploit the predictions of the original model, thereby obtaining more accurate gradient information for pruning. Moreover, we find that, compared to attention modules, the predictions of LLM are less sensitive to multilayer perceptron (MLP) modules, which take up more than 5× parameters (LLaMA3.2-1.2B). To this end, we focus on the pruning of MLP modules, to significantly compress LLM without obvious performance degradation. Experimental results on extensive zero-shot benchmarks demonstrate that our method significantly outperforms existing pruning methods. Furthermore, our method achieves very competitive performance among 1B-scale open source LLMs.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/visresearch/SDMPrune.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="efficiency multimodal">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/tang2025compact.png"/></div>
+<dt class="ptitle">Learning Compact Vision Tokens for Efficient Large Multimodal Models</dt>
+<dd>Hao Tang, <b class="me">Chengchao Shen*</b></dd>
+<dd>Arxiv, 2025</dd>
+<dd>
+                    [<a href="https://arxiv.org/abs/2506.07138" target="_blank">arXiv</a>] [<a href="https://github.com/visresearch/LLaVA-STF" target="_blank">code</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@article{tang2025compact,
+    author  = {Tang, Hao and Shen, Chengchao},
+    title   = {Learning Compact Vision Tokens for Efficient Large Multimodal Models},
+    journal = {arXiv preprint arXiv:2506.07138},
+    year    = {2025},
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>Large multimodal models (LMMs) suffer significant computational challenges due to the high cost of Large Language Models (LLMs) and the quadratic complexity of processing long vision token sequences. In this paper, we explore the spatial redundancy among vision tokens and shorten the length of vision token sequences for inference acceleration. Specifically, we propose a Spatial Token Fusion (STF) method to learn compact vision tokens for short vision token sequence, where spatial-adjacent tokens are fused into one. Meanwhile, weight-frozen vision encoder can not well adapt to the demand of extensive downstream vision-language tasks. To this end, we further introduce a Multi-Block Token Fusion (MBTF) module to supplement multi-granularity features for the reduced token sequence. Overall, we combine STF and MBTF module to balance token reduction and information preservation, thereby improving inference efficiency without sacrificing multimodal reasoning capabilities. Experimental results demonstrate that our method based on LLaVA-1.5 achieves comparable or even superior performance to the baseline on 8 popular vision-language benchmarks with only 25% vision tokens of baseline.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/visresearch/LLaVA-STF.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="efficiency">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/tang2025data.png"/></div>
+<dt class="ptitle">Data-Efficient Multi-Scale Fusion Vision Transformer</dt>
+<dd>Hao Tang, Dawei Liu, <b class="me">Chengchao Shen*</b></dd>
+<dd>Pattern Recognition, 2025</dd>
+<dd>
+                    [<a href="https://www.sciencedirect.com/science/article/pii/S0031320324010562" target="_blank">paper</a>] [<a href="https://github.com/visresearch/dems" target="_blank">code</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@article{tang2025data,
+    title={Data-Efficient Multi-Scale Fusion Vision Transformer}, 
+    author={Tang, Hao and Liu, Dawei and Shen, Chengchao},
+    journal={Pattern Recognition},
+    volume = {161},
+    pages = {111305},
+    year={2025}
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>Vision transformers (ViTs) excel in image classification with large datasets but struggle with smaller ones. Vanilla ViTs are single-scale, tokenizing images into patches with a single patch size. In this paper, we introduce multi-scale tokens, where multiple scales are achieved by splitting images into patches of varying sizes. Our model concatenates token sequences of multiple scales for attention, and a regional cross-scale interaction module fuses these tokens, improving data efficiency by learning local structures across scales. Additionally, we implement a data augmentation schedule to refine training. Extensive experiments on image classification demonstrate our approach surpasses DeiT by 6.6% on CIFAR100 and 3.2% on ImageNet1K.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/visresearch/dems.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="unsupervised">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/shen2025multiple.png"/></div>
+<dt class="ptitle">Multiple Object Stitching for Unsupervised Representation Learning</dt>
+<dd><b class="me">Chengchao Shen</b>, Dawei Liu, Jianxin Wang</dd>
+<dd>Arxiv, 2025</dd>
+<dd>
+                    [<a href="https://arxiv.org/abs/2506.07364" target="_blank">arXiv</a>] [<a href="https://github.com/visresearch/MultipleObjectStitching" target="_blank">code</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@article{tang2025data,
+    title={Multiple Object Stitching for Unsupervised Representation Learning},
+    author={Shen, Chengchao and Liu, Dawei and Wang Jianxin},
+    journal = {arXiv preprint arXiv:2506.07364},
+    year={2025}
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>Contrastive learning for single object centric images has achieved remarkable progress on unsupervised representation, but suffering inferior performance on the widespread images with multiple objects. In this paper, we propose a simple but effective method, Multiple Object Stitching (MOS), to refine the unsupervised representation for multi-object images. Specifically, we construct the multi-object images by stitching the single object centric ones, where the objects in the synthesized multi-object images are predetermined. Hence, compared to the existing contrastive methods, our method provides additional object correspondences between multi-object images without human annotations. In this manner, our method pays more attention to the representations of each object in multi-object image, thus providing more detailed representations for complicated downstream tasks, such as object detection and semantic segmentation. Experimental results on ImageNet, CIFAR and COCO datasets demonstrate that our proposed method achieves the leading unsupervised representation performance on both single object centric images and multi-object ones.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/visresearch/MultipleObjectStitching.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="unsupervised efficiency">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/shen2024multi.png"/></div>
+<dt class="ptitle">Multi-Grained Contrast for Data-Efficient Unsupervised Representation Learning</dt>
+<dd><b class="me">Chengchao Shen</b>, Jianzhong Chen, Jianxin Wang</dd>
+<dd>Pattern Recognition, 2025</dd>
+<dd>
+                    [<a href="https://www.sciencedirect.com/science/article/pii/S0031320325003152" target="_blank">paper</a>] [<a href="https://arxiv.org/abs/2407.02014" target="_blank">arXiv</a>] [<a href="https://github.com/visresearch/mgc" target="_blank">code</a>] [<a href="https://zhuanlan.zhihu.com/p/708880336" target="_blank">blog</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@article{shen2025multi,
+    author  = {Shen, Chengchao and Chen, Jianzhong and Wang, Jianxin},
+    title   = {Multi-Grained Contrast for Data-Efficient Unsupervised Representation Learning},
+    journal = {Pattern Recognition},
+    pages = {111655},
+    year = {2025},
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>The existing contrastive learning methods mainly focus on single-grained representation learning, e.g., part-level, object-level or scene-level ones, thus inevitably neglecting the transferability of representations on other granularity levels. In this paper, we aim to learn multi-grained representations, which can effectively describe the image on various granularity levels, thus improving generalization on extensive downstream tasks. To this end, we propose a novel Multi-Grained Contrast method (MGC) for unsupervised representation learning. Specifically, we construct delicate multi-grained correspondences between positive views and then conduct multi-grained contrast by the correspondences to learn more general unsupervised representations. Without pretrained on large-scale dataset, our method significantly outperforms the existing state-of-the-art methods on extensive downstream tasks, including object detection, instance segmentation, scene parsing, semantic segmentation and keypoint detection. Moreover, experimental results support the data-efficient property and excellent representation transferability of our method.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/visresearch/mgc.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="unsupervised">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/shen2023asymmetric.png"/></div>
+<dt class="ptitle">Asymmetric Patch Sampling for Contrastive Learning</dt>
+<dd><b class="me">Chengchao Shen</b>, Jianzhong Chen, Shu Wang, Hulin Kuang, Jin Liu, Jianxin Wang</dd>
+<dd>Pattern Recognition, 2025</dd>
+<dd>
+                    [<a href="https://www.sciencedirect.com/science/article/pii/S0031320324007635" target="_blank">paper</a>] [<a href="https://arxiv.org/abs/2306.02854" target="_blank">arXiv</a>] [<a href="https://github.com/visresearch/aps" target="_blank">code</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@article{shen2025asymmetric,
+    title={Asymmetric Patch Sampling for Contrastive Learning}, 
+    author={Shen, Chengchao and Chen, Jianzhong and Wang, Shu and Kuang, Hulin and Liu, Jin and Wang, Jianxin},
+    journal={Pattern Recognition},
+    volume = {158},
+    pages = {111012},
+    year={2025}
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>Asymmetric appearance between positive pair effectively reduces the risk of representation degradation in contrastive learning. However, there are still a mass of appearance similarities between positive pair constructed by the existing methods, which inhibits the further representation improvement. In this paper, we propose a novel asymmetric patch sampling strategy for contrastive learning, to further boost the appearance asymmetry for better representations. Specifically, dual patch sampling strategies are applied to the given image, to obtain asymmetric positive pairs. First, sparse patch sampling is conducted to obtain the first view, which reduces spatial redundancy of image and allows a more asymmetric view. Second, a selective patch sampling is proposed to construct another view with large appearance discrepancy relative to the first one. Due to the inappreciable appearance similarity between positive pair, the trained model is encouraged to capture the similarity on semantics, instead of low-level ones. Experimental results demonstrate that our proposed method significantly outperforms the existing self-supervised methods on both ImageNet-1K and CIFAR dataset, e.g., 2.5% finetune accuracy improvement on CIFAR100. Furthermore, our method achieves state-of-the-art performance on downstream tasks, object detection and instance segmentation on COCO. Additionally, compared to other self-supervised methods, our method is more efficient on both memory and computation during training.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/visresearch/aps.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="unsupervised">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/shen2023inter.png"/></div>
+<dt class="ptitle">Inter-Instance Similarity Modeling for Contrastive Learning</dt>
+<dd><b class="me">Chengchao Shen</b>, Dawei Liu, Hao Tang, Zhe Qu, Jianxin Wang</dd>
+<dd>Arxiv, 2023</dd>
+<dd>
+                    [<a href="https://arxiv.org/abs/2306.12243" target="_blank">arXiv</a>] [<a href="https://github.com/visresearch/patchmix" target="_blank">code</a>] [<a href="https://zhuanlan.zhihu.com/p/639240952" target="_blank">blog</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@article{shen2023inter,
+    author  = {Shen, Chengchao and Liu, Dawei and Tang, Hao and Qu, Zhe and Wang, Jianxin},
+    title   = {Inter-Instance Similarity Modeling for Contrastive Learning},
+    journal = {arXiv preprint arXiv:2306.12243},
+    year    = {2023},
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>The existing contrastive learning methods widely adopt one-hot instance discrimination as pretext task for self-supervised learning, which inevitably neglects rich inter-instance similarities among natural images, then leading to potential representation degeneration. In this paper, we propose a novel image mix method, PatchMix, for contrastive learning in Vision Transformer (ViT), to model inter-instance similarities among images. Following the nature of ViT, we randomly mix multiple images from mini-batch in patch level to construct mixed image patch sequences for ViT. Compared to the existing sample mix methods, our PatchMix can flexibly and efficiently mix more than two images and simulate more complicated similarity relations among natural images. In this manner, our contrastive framework can significantly reduce the gap between contrastive objective and ground truth in reality. Experimental results demonstrate that our proposed method significantly outperforms the previous state-of-the-art on both ImageNet-1K and CIFAR datasets, e.g., 3.0% linear accuracy improvement on ImageNet-1K and 8.7% kNN accuracy improvement on CIFAR100. Moreover, our method achieves the leading transfer performance on downstream tasks, object detection and instance segmentation on COCO dataset.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/visresearch/patchmix.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="federated">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/sheng2023modeling.png"/></div>
+<dt class="ptitle">Modeling Global Distribution for Federated Learning with Label Distribution Skew</dt>
+<dd>Tao Sheng, <b class="me">Chengchao Shen*</b>, Yuan Liu, Yeyu Ou, Zhe Qu, Yixiong Liang, Jianxin Wang</dd>
+<dd>Pattern Recognition, 2023</dd>
+<dd>
+                    [<a href="https://www.sciencedirect.com/science/article/pii/S0031320323004223" target="_blank">paper</a>] [<a href="https://arxiv.org/abs/2212.08883" target="_blank">arXiv</a>] [<a href="https://github.com/Sheng-T/FedMGD" target="_blank">code</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@article{sheng2023modeling,
+    author    = {Sheng, Tao and Shen, Chengchao and Liu, Yuan and Ou, Yeyu and Qu, Zhe and Wang, Jianxin},
+    title     = {Modeling Global Distribution for Federated Learning with Label Distribution Skew},
+    journal   = {Pattern Recognition},
+    volume = {143},
+    pages = {109724},
+    year      = {2023}
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>Federated learning achieves joint training of deep models by connecting decentralized data sources, which can significantly mitigate the risk of privacy leakage. However, in a more general case, the distributions of labels among clients are different, called ``label distribution skew''. Directly applying conventional federated learning without consideration of label distribution skew issue significantly hurts the performance of the global model. To this end, we propose a novel federated learning method, named FedMGD, to alleviate the performance degradation caused by the label distribution skew issue. It introduces a global Generative Adversarial Network to model the global data distribution without access to local datasets, so the global model can be trained using the global information of data distribution without privacy leakage. The experimental results demonstrate that our proposed method significantly outperforms the state-of-the-art on several public benchmarks.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/Sheng-T/FedMGD.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="generation">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/shen2021training.png"/></div>
+<dt class="ptitle">Training Generative Adversarial Networks in One Stage</dt>
+<dd><b class="me">Chengchao Shen</b>, Youtan Yin, Xinchao Wang, Xubin Li, Jie Song, Mingli Song</dd>
+<dd>The IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>, <b>CCF A</b>), 2021</dd>
+<dd>
+                    [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Shen_Training_Generative_Adversarial_Networks_in_One_Stage_CVPR_2021_paper.pdf" target="_blank">paper</a>] [<a href="http://arxiv.org/abs/2103.00430" target="_blank">arXiv</a>] [<a href="https://github.com/zju-vipa/OSGAN" target="_blank">code</a>] [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Shen_Training_Generative_Adversarial_CVPR_2021_supplemental.pdf" target="_blank">supp</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@inproceedings{shen2021training,
+    author    = {Shen, Chengchao and Yin, Youtan and Wang, Xinchao and Li, Xubin and Song, Jie and Song, Mingli},
+    title     = {Training Generative Adversarial Networks in One Stage},
+    booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2021},
+    pages     = {3350--3360}
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>Generative Adversarial Networks (GANs) have demonstrated unprecedented success in various image generation tasks. The encouraging results, however, come at the price of a cumbersome training process, during which the generator and discriminator are alternately updated in two stages. In this paper, we investigate a general training scheme that enables training GANs efficiently in only one stage. Based on the adversarial losses of the generator and discriminator, we categorize GANs into two classes, Symmetric GANs and Asymmetric GANs, and introduce a novel gradient decomposition method to unify the two, allowing us to train both classes in one stage and hence alleviate the training effort. We also computationally analyze the efficiency of the proposed method, and empirically demonstrate that, the proposed method yields a solid 1.5× acceleration across various datasets and network architectures. Furthermore, we show that the proposed method is readily applicable to other adversarial-training scenarios, such as data-free knowledge distillation.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/zju-vipa/OSGAN.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="distillation">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/shen2021progressive.png"/></div>
+<dt class="ptitle">Progressive Network Grafting for Few-Shot Knowledge Distillation</dt>
+<dd><b class="me">Chengchao Shen</b>, Xinchao Wang, Youtan Yin, Jie Song, Sihui Luo, Mingli Song</dd>
+<dd>AAAI Conference on Artificial Intelligence (<b>AAAI</b>, <b>CCF A</b>), 2021</dd>
+<dd>
+                    [<a href="https://ojs.aaai.org/index.php/AAAI/article/view/16356/16163" target="_blank">paper</a>] [<a href="https://arxiv.org/abs/2012.04915" target="_blank">arXiv</a>] [<a href="https://github.com/zju-vipa/NetGraft" target="_blank">code</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@inproceedings{shen2021progressive,
+    title={Progressive Network Grafting for Few-Shot Knowledge Distillation},
+    author={Shen, Chengchao and Wang, Xinchao and Yin, Youtan and Song, Jie and Luo, Sihui and Song, Mingli},
+    booktitle = {AAAI Conference on Artificial Intelligence (AAAI)},
+    url={https://ojs.aaai.org/index.php/AAAI/article/view/16356},  
+    year={2021},
+    month={May}, 
+    volume={35}, 
+    pages={2541--2549} 
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>Knowledge distillation has demonstrated encouraging performances in deep model compression. Most existing approaches, however, require massive labeled data to accomplish the knowledge transfer, making the model compression a cumbersome and costly process. In this paper, we investigate the practical few-shot knowledge distillation scenario, where we assume only a few samples without human annotations are available for each category. To this end, we introduce a principled dual-stage distillation scheme tailored for few-shot data. In the first step, we graft the student blocks one by one onto the teacher, and learn the parameters of the grafted block intertwined with those of the other teacher blocks. In the second step, the trained student blocks are progressively connected and then together grafted onto the teacher network, allowing the learned student blocks to adapt themselves to each other and eventually replace the teacher network. Experiments demonstrate that our approach, with only a few unlabeled samples, achieves gratifying results on CIFAR10, CIFAR100, and ILSVRC-2012. On CIFAR10 and CIFAR100, our performances are even on par with those of knowledge distillation schemes that utilize the full datasets.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/zju-vipa/NetGraft.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="distillation">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/shen2019customizing.png"/></div>
+<dt class="ptitle">Customizing Student Networks From Heterogeneous Teachers via Adaptive Knowledge Amalgamation</dt>
+<dd><b class="me">Chengchao Shen</b>, Mengqi Xue, Xinchao Wang, Jie Song, Li Sun, Mingli Song</dd>
+<dd>The IEEE International Conference on Computer Vision (<b>ICCV</b>, <b>CCF A</b>), 2019</dd>
+<dd>
+                    [<a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Shen_Customizing_Student_Networks_From_Heterogeneous_Teachers_via_Adaptive_Knowledge_Amalgamation_ICCV_2019_paper.pdf" target="_blank">paper</a>] [<a href="https://arxiv.org/abs/1908.07121" target="_blank">arXiv</a>] [<a href="https://github.com/zju-vipa/KamalEngine" target="_blank">code</a>] [<a href="https://openaccess.thecvf.com/content_ICCV_2019/supplemental/Shen_Customizing_Student_Networks_ICCV_2019_supplemental.pdf" target="_blank">supp</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@inproceedings{shen2019customizing,
+    author    = {Shen, Chengchao and Xue, Mengqi and Wang, Xinchao and Song, Jie and Sun, Li and Song, Mingli},
+    title     = {Customizing student networks from heterogeneous teachers via adaptive knowledge amalgamation},
+    booktitle = {The IEEE International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    pages     = {3504--3513},
+    year      = {2019}
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>A massive number of well-trained deep networks have been released by developers online. These networks may focus on different tasks and in many cases are optimized for different datasets. In this paper, we study how to exploit such heterogeneous pre-trained networks, known as teachers, so as to train a customized student network that tackles a set of selective tasks defined by the user. We assume no human annotations are available, and each teacher may be either single- or multi-task. To this end, we introduce a dual-step strategy that first extracts the task-specific knowledge from the heterogeneous teachers sharing the same sub-task, and then amalgamates the extracted knowledge to build the student network. To facilitate the training, we employ a selective learning scheme where, for each unlabelled sample, the student learns adaptively from only the teacher with the least prediction ambiguity. We evaluate the proposed approach on several datasets and the experimental results demonstrate that the student, learned by such adaptive knowledge amalgamation, achieves performances even better than those of the teachers.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/zju-vipa/KamalEngine.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="distillation">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/shen2019amalgamating.png"/></div>
+<dt class="ptitle">Amalgamating Knowledge towards Comprehensive Classification</dt>
+<dd><b class="me">Chengchao Shen</b>, Xinchao Wang, Jie Song, Li Sun, Mingli Song</dd>
+<dd>AAAI Conference on Artificial Intelligence (<b>AAAI</b>, <b>CCF A</b>), 2019</dd>
+<dd>
+                    [<a href="https://aaai.org/ojs/index.php/AAAI/article/view/4165" target="_blank">paper</a>] [<a href="https://arxiv.org/abs/1811.02796" target="_blank">arXiv</a>] [<a href="https://github.com/zju-vipa/KamalEngine" target="_blank">code</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@inproceedings{shen2019amalgamating,
+    author    = {Shen, Chengchao and Wang, Xinchao and Song, Jie and Sun, Li and Song, Mingli},
+    title     = {Amalgamating Knowledge towards Comprehensive Classification},
+    booktitle = {AAAI Conference on Artificial Intelligence (AAAI)},
+    pages     = {3068--3075},
+    year      = {2019}
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>With the rapid development of deep learning, there have been an unprecedentedly large number of trained deep network models available online. Reusing such trained models can significantly reduce the cost of training the new models from scratch, if not infeasible at all as the annotations used for the training original networks are often unavailable to public. We propose in this paper to study a new model-reusing task, which we term as \emph{knowledge amalgamation}. Given multiple trained teacher networks, each of which specializes in a different classification problem, the goal of knowledge amalgamation is to learn a lightweight student model capable of handling the comprehensive classification. We assume no other annotations except the outputs from the teacher models are available, and thus focus on extracting and amalgamating knowledge from the multiple teachers. To this end, we propose a pilot two-step strategy to tackle the knowledge amalgamation task, by learning first the compact feature representations from teachers and then the network parameters in a layer-wise manner so as to build the student model. We apply this approach to four public datasets and obtain very encouraging results: even without any human annotation, the obtained student model is competent to handle the comprehensive classification task and in most cases outperforms the teachers in individual sub-tasks.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/zju-vipa/KamalEngine.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="other">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/shen2018intra.png"/></div>
+<dt class="ptitle">Intra-class Structure Aware Networks for Screen Defect Detection</dt>
+<dd><b class="me">Chengchao Shen</b>, Jie Song, Sihui Luo, Li Sun, Mingli Song</dd>
+<dd>International Conference on Neural Information Processing (<b>ICONIP</b>, <b>CCF C</b>), 2018</dd>
+<dd>
+                    [<a href="https://link.springer.com/chapter/10.1007/978-3-030-04212-7_42" target="_blank">paper</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@inproceedings{shen2018intra,
+    title={Intra-class Structure Aware Networks for Screen Defect Detection},
+    author={Shen, Chengchao and Song, Jie and Song, Shuyi and Luo, Sihui and Sun, Li and Song, Mingli},
+    booktitle={International Conference on Neural Information Processing (ICONIP)},
+    pages={476--485},
+    year={2018},
+    organization={Springer}
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>Typically, screen defect detection treats different types of defects as a single category and ignores the large variation among them, which may pose large difficulty to the model learning and thus lead to inferior performance. In this paper, we propose a novel network model, called Intra-class Structure Aware Networks (ISANs), to alleviate the difficulty of learning one single concept which exhibits in various forms. The proposed model introduces more neural units for the "defect" category rather than a single one, to accommodate the large variations in this category, which can significantly improve the representation power. Regularized by prior distribution of intra-class variants, our approach can learn intra-class structure of screen defect without extra fine-grained labels. Experimental results demonstrate that ISANs can effectively discriminate intra-class variants and gain significant performance improvement on screen defect detection task as well as the classification task in MNIST.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="zero-shot">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/song2018selective.png"/></div>
+<dt class="ptitle">Selective Zero-Shot Classification With Augmented Attributes</dt>
+<dd>Jie Song, <b class="me">Chengchao Shen</b>, Jie Lei, An-Xiang Zeng, Kairi Ou, Dacheng Tao, Mingli Song</dd>
+<dd>The European Conference on Computer Vision (<b>ECCV</b>, <b>CCF B</b>), 2018</dd>
+<dd>
+                    [<a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Jie_Song_Selective_Zero-Shot_Classification_ECCV_2018_paper.pdf" target="_blank">paper</a>] [<a href="http://arxiv.org/abs/1807.07437v1" target="_blank">arXiv</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@inproceedings{song2018selective,
+    title={Selective zero-shot classification with augmented attributes},
+    author={Song, Jie and Shen, Chengchao and Lei, Jie and Zeng, An-Xiang and Ou, Kairi and Tao, Dacheng and Song, Mingli},
+    booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+    pages={468--483},
+    year={2018}
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>In this paper, we introduce a selective zero-shot classification problem: how can the classifier avoid making dubious predictions? Existing attribute-based zero-shot classification methods are shown to work poorly in the selective classification scenario. We argue the under-complete human defined attribute vocabulary accounts for the poor performance. We propose a selective zero-shot classifier based on both the human defined and the automatically discovered residual attributes. The proposed classifier is constructed by firstly learning the defined and the residual attributes jointly. Then the predictions are conducted within the subspace of the defined attributes. Finally, the prediction confidence is measured by both the defined and the residual attributes. Experiments conducted on several benchmarks demonstrate that our classifier produces a superior performance to other methods under the risk-coverage trade-off metric.</p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="zero-shot">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/song2018transductive.png"/></div>
+<dt class="ptitle">Transductive Unbiased Embedding for Zero-Shot Learning</dt>
+<dd>Jie Song, <b class="me">Chengchao Shen</b>, Yezhou Yang, Yang Liu, Mingli Song</dd>
+<dd>The IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>, <b>CCF A</b>), 2018</dd>
+<dd>
+                    [<a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Song_Transductive_Unbiased_Embedding_CVPR_2018_paper.pdf" target="_blank">paper</a>] [<a href="http://arxiv.org/abs/1803.11320v1" target="_blank">arXiv</a>] [<a href="https://github.com/Ying-Yuchen/QFSL-zeroshot" target="_blank">code</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@inproceedings{song2018transductive,
+    author    = {Song, Jie and Shen, Chengchao and Yang, Yezhou and Liu, Yang and Song, Mingli},
+    title     = {Transductive Unbiased Embedding for Zero-Shot Learning},
+    booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    pages     = {1024--1033},
+    year      = {2018}
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>Most existing Zero-Shot Learning (ZSL) methods have the strong bias problem, in which instances of unseen (target) classes tend to be categorized as one of the seen (source) classes. So they yield poor performance after being deployed in the generalized ZSL settings. In this paper, we propose a straightforward yet effective method named Quasi-Fully Supervised Learning (QFSL) to alleviate the bias problem. Our method follows the way of transductive learning, which assumes that both the labeled source images and unlabeled target images are available for training. In the semantic embedding space, the labeled source images are mapped to several fixed points specified by the source categories, and the unlabeled target images are forced to be mapped to other points specified by the target categories. Experiments conducted on AwA2, CUB and SUN datasets demonstrate that our method outperforms existing state-of-the-art approaches by a huge margin of 9.3~24.5% following generalized ZSL settings, and by a large margin of 0.2~16.2% following conventional ZSL settings.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/Ying-Yuchen/QFSL-zeroshot.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="distillation generation">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/fang2021contrastive.png"/></div>
+<dt class="ptitle">Contrastive Model Inversion for Data-Free Knowledge Distillation</dt>
+<dd>Gongfan Fang, Jie Song, Xinchao Wang, <b class="me">Chengchao Shen</b>, Xingen Wang, Mingli Song</dd>
+<dd>International Joint Conference on Artificial Intelligence (<b>IJCAI</b>, <b>CCF A</b>), 2021</dd>
+<dd>
+                    [<a href="https://www.ijcai.org/proceedings/2021/0327.pdf" target="_blank">paper</a>] [<a href="https://arxiv.org/abs/2105.08584" target="_blank">arXiv</a>] [<a href="https://github.com/zju-vipa/CMI" target="_blank">code</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@inproceedings{fang2021contrastive,
+    title={Contrastive Model Inversion for Data-Free Knowledge Distillation},
+    author={Fang, Gongfan and Song, Jie and Wang, Xinchao and Shen, Chengchao and Wang, Xingen and Song, Mingli},
+    booktitle={International Joint Conference on Artificial Intelligence (IJCAI)},
+    year={2021},
+    pages={2374--2380}
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>Model inversion, whose goal is to recover training data from a pre-trained model, has been recently proved feasible. However, existing inversion methods usually suffer from the mode collapse problem, where the synthesized instances are highly similar to each other and thus show limited effectiveness for downstream tasks, such as knowledge distillation. In this paper, we propose Contrastive Model Inversion~(CMI), where the data diversity is explicitly modeled as an optimizable objective, to alleviate the mode collapse issue. Our main observation is that, under the constraint of the same amount of data, higher data diversity usually indicates stronger instance discrimination. To this end, we introduce in CMI a contrastive learning objective that encourages the synthesizing instances to be distinguishable from the already synthesized ones in previous batches. Experiments of pre-trained models on CIFAR-10, CIFAR-100, and Tiny-ImageNet demonstrate that CMI not only generates more visually plausible instances than the state of the arts, but also achieves significantly superior performance when the generated data are used for knowledge distillation.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/zju-vipa/CMI.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="distillation generation">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/fang2021mosaicking.png"/></div>
+<dt class="ptitle">Mosaicking to Distill: Knowledge Distillation from Out-of-Domain Data</dt>
+<dd>Gongfan Fang, Yifan Bao, Jie Song, Xinchao Wang, Donglin Xie, <b class="me">Chengchao Shen</b>, Mingli Song</dd>
+<dd>Advances in Neural Information Processing Systems (<b>NeurIPS</b>, <b>CCF A</b>), 2021</dd>
+<dd>
+                    [<a href="https://papers.nips.cc/paper/2021/file/63dc7ed1010d3c3b8269faf0ba7491d4-Paper.pdf" target="_blank">paper</a>] [<a href="https://arxiv.org/abs/2110.15094" target="_blank">arXiv</a>] [<a href="https://github.com/zju-vipa/MosaicKD" target="_blank">code</a>] [<a href="https://papers.nips.cc/paper/2021/file/63dc7ed1010d3c3b8269faf0ba7491d4-Supplemental.pdf" target="_blank">supp</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@inproceedings{fang2021mosaicking,
+    title={Mosaicking to Distill: Knowledge Distillation from Out-of-Domain Data},
+    author={Fang, Gongfan and Bao, Yifan and Song, Jie and Wang, Xinchao and Xie, Donglin and Shen, Chengchao and Song, Mingli},
+    booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+    year={2021}
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>Knowledge distillation (KD) aims to craft a compact student model that imitates the behavior of a pre-trained teacher in a target domain. Prior KD approaches, despite their gratifying results, have largely relied on the premise that in-domain data is available to carry out the knowledge transfer. Such an assumption, unfortunately, in many cases violates the practical setting, since the original training data or even the data domain is often unreachable due to privacy or copyright reasons. In this paper, we attempt to tackle an ambitious task, termed as out-of-domain knowledge distillation (OOD-KD), which allows us to conduct KD using only OOD data that can be readily obtained at a very low cost. Admittedly, OOD-KD is by nature a highly challenging task due to the agnostic domain gap. To this end, we introduce a handy yet surprisingly efficacious approach, dubbed as MosaicKD. The key insight behind MosaicKD lies in that, samples from various domains share common local patterns, even though their global semantic may vary significantly; these shared local patterns, in turn, can be re-assembled analogous to mosaic tiling, to approximate the in-domain data and to further alleviating the domain discrepancy. In MosaicKD, this is achieved through a four-player min-max game, in which a generator, a discriminator, a student network, are collectively trained in an adversarial manner, partially under the guidance of a pre-trained teacher. We validate MosaicKD over classification and semantic segmentation tasks across various benchmarks, and demonstrate that it yields results much superior to the state-of-the-art counterparts on OOD data.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/zju-vipa/MosaicKD.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="distillation generation">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/fang2019data.png"/></div>
+<dt class="ptitle">Data-Free Adversarial Distillation</dt>
+<dd>Gongfan Fang, Jie Song, <b class="me">Chengchao Shen</b>, Xinchao Wang, Da Chen, Mingli Song</dd>
+<dd>ArXiv:1912.11006, 2019</dd>
+<dd>
+                    [<a href="https://arxiv.org/abs/1912.11006" target="_blank">arXiv</a>] [<a href="https://github.com/VainF/Data-Free-Adversarial-Distillation" target="_blank">code</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@article{fang2019data,
+    title={Data-free adversarial distillation},
+    author={Fang, Gongfan and Song, Jie and Shen, Chengchao and Wang, Xinchao and Chen, Da and Song, Mingli},
+    journal={arXiv preprint arXiv:1912.11006},
+    year={2019}
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>Knowledge Distillation (KD) has made remarkable progress in the last few years and become a popular paradigm for model compression and knowledge transfer. However, almost all existing KD algorithms are data-driven, i.e., relying on a large amount of original training data or alternative data, which is usually unavailable in real-world scenarios. In this paper, we devote ourselves to this challenging problem and propose a novel adversarial distillation mechanism to craft a compact student model without any real-world data. We introduce a model discrepancy to quantificationally measure the difference between student and teacher models and construct an optimizable upper bound. In our work, the student and the teacher jointly act the role of the discriminator to reduce this discrepancy, when a generator adversarially produces some "hard samples" to enlarge it. Extensive experiments demonstrate that the proposed data-free method yields comparable performance to existing data-driven methods. More strikingly, our approach can be directly extended to semantic segmentation, which is more complicated than classification, and our approach achieves state-of-the-art results.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/VainF/Data-Free-Adversarial-Distillation.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="transfer">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/song2020depara.png"/></div>
+<dt class="ptitle">DEPARA: Deep Attribution Graph for Deep Knowledge Transferability</dt>
+<dd>Jie Song, Yixin Chen, Jingwen Ye, Xinchao Wang, <b class="me">Chengchao Shen</b>, Feng Mao, Mingli Song</dd>
+<dd>The IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>, <b>CCF A</b>), 2020</dd>
+<dd>
+                    [<a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Song_DEPARA_Deep_Attribution_Graph_for_Deep_Knowledge_Transferability_CVPR_2020_paper.pdf" target="_blank">paper</a>] [<a href="http://arxiv.org/abs/2003.07496" target="_blank">arXiv</a>] [<a href="https://github.com/zju-vipa/DEPARA" target="_blank">code</a>] [<a href="https://openaccess.thecvf.com/content_CVPR_2020/supplemental/Song_DEPARA_Deep_Attribution_CVPR_2020_supplemental.pdf" target="_blank">supp</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@inproceedings{song2020depara,
+    title={Depara: Deep attribution graph for deep knowledge transferability},
+    author={Song, Jie and Chen, Yixin and Ye, Jingwen and Wang, Xinchao and Shen, Chengchao and Mao, Feng and Song, Mingli},
+    booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    pages={3922--3930},
+    year={2020}
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>Exploring the intrinsic interconnections between the knowledge encoded in PRe-trained Deep Neural Networks (PR-DNNs) of heterogeneous tasks sheds light on their mutual transferability, and consequently enables knowledge transfer from one task to another so as to reduce the training effort of the latter. In this paper, we propose the DEeP Attribution gRAph (DEPARA) to investigate the transferability of knowledge learned from PR-DNNs. In DEPARA, nodes correspond to the inputs and are represented by their vectorized attribution maps with regards to the outputs of the PR-DNN. Edges denote the relatedness between inputs and are measured by the similarity of their features extracted from the PR-DNN. The knowledge transferability of two PR-DNNs is measured by the similarity of their corresponding DEPARAs. We apply DEPARA to two important yet under-studied problems in transfer learning: pre-trained model selection and layer selection. Extensive experiments are conducted to demonstrate the effectiveness and superiority of the proposed method in solving both these problems.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/zju-vipa/DEPARA.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="transfer">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/song2019deep.png"/></div>
+<dt class="ptitle">Deep Model Transferability from Attribution Maps</dt>
+<dd>Jie Song, Yixin Chen, Xinchao Wang, <b class="me">Chengchao Shen</b>, Mingli Song</dd>
+<dd>Advances in Neural Information Processing Systems (<b>NeurIPS</b>, <b>CCF A</b>), 2019</dd>
+<dd>
+                    [<a href="https://papers.nips.cc/paper/2019/file/e94fe9ac8dc10dd8b9a239e6abee2848-Paper.pdf" target="_blank">paper</a>] [<a href="https://arxiv.org/abs/1909.11902" target="_blank">arXiv</a>] [<a href="https://github.com/zju-vipa/TransferbilityFromAttributionMaps" target="_blank">code</a>] [<a href="https://papers.nips.cc/paper/2019/file/e94fe9ac8dc10dd8b9a239e6abee2848-Supplemental.zip" target="_blank">supp</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@inproceedings{song2019deep,
+    title={Deep model transferability from attribution maps},
+    author={Song, Jie and Chen, Yixin and Wang, Xinchao and Shen, Chengchao and Song, Mingli},
+    booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+    year={2019}
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>Exploring the transferability between heterogeneous tasks sheds light on their intrinsic interconnections, and consequently enables knowledge transfer from one task to another so as to reduce the training effort of the latter. In this paper, we propose an embarrassingly simple yet very efficacious approach to estimating the transferability of deep networks, especially those handling vision tasks. Unlike the seminal work of taskonomy that relies on a large number of annotations as supervision and is thus computationally cumbersome, the proposed approach requires no human annotations and imposes no constraints on the architectures of the networks. This is achieved, specifically, via projecting deep networks into a model space, wherein each network is treated as a point and the distances between two points are measured by deviations of their produced attribution maps. The proposed approach is several-magnitude times faster than taskonomy, and meanwhile preserves a task-wise topological structure highly similar to the one obtained by taskonomy.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/zju-vipa/TransferbilityFromAttributionMaps.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div></div>
+<script>
                     // Wait for DOM content to load
                     document.addEventListener('DOMContentLoaded', function() {
-                        loadPublications().then(html => {
-                            document.getElementById('publications-content').innerHTML = html;
-                            // Initialize filters and modal after content is loaded
-                            initializeFilters();
-                            initializeImageModal();
-                        }).catch(error => {
-                            console.error('Error loading publications:', error);
-                            document.getElementById('publications-content').innerHTML = 'Error loading publications';
-                        });
+                        // Initialize filters and modal after content is loaded
+                        initializeFilters();
+                        initializeImageModal();
                     });
                 </script>
-
-            </div>
-
-            <!-- ---------------- Education ---------------- -->
-            <!--
+</div>
+<!-- ---------------- Education ---------------- -->
+<!--
             <div class="education" id="education">
                 <h3 class="title">Education</h3>
 
@@ -125,42 +666,34 @@
                 
             </div>
             -->
-            <!-- ----------------- Services ----------------- -->
-            <div class="services" id="services">
-                <h3 class="title">Academic Services</h3>
-                <!-- <b style="font-size: 20px;">Conference Reviewer</b>: -->
-                <b style="font-size: 20px;">Program Committee</b>:
+<!-- ----------------- Services ----------------- -->
+<div class="services" id="services">
+<h3 class="title">Academic Services</h3>
+<!-- <b style="font-size: 20px;">Conference Reviewer</b>: -->
+<b style="font-size: 20px;">Program Committee</b>:
                 <!-- <h4 style="font-size: 20px; padding-top: -10px;">Program Committee: </b> -->
+<ul>
+<li>The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</li>
+<li>The IEEE International Conference on Computer Vision (ICCV)</li>
+<li>The European Conference on Computer Vision (ECCV)</li>
+<li>AAAI Conference on Artificial Intelligence (AAAI)</li>
+<li>Advances in Neural Information Processing Systems (NeurIPS)</li>
+<li>International Conference on Learning Representations (ICLR)</li>
+<li>International Conference on Machine Learning (ICML)</li>
+<li>International Joint Conference on Artificial Intelligence (IJCAI)</li>
+<li>The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD)</li>
+<li>The European Conference on Artificial Intelligence (ECAI)</li>
+</ul>
+<b style="font-size: 20px;">Journal Reviewer</b>:
                 <ul>
-                    <li>The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</li>
-                    <li>The IEEE International Conference on Computer Vision (ICCV)</li>
-                    <li>The European Conference on Computer Vision (ECCV)</li>
-                    <li>AAAI Conference on Artificial Intelligence (AAAI)</li>
-                    <li>Advances in Neural Information Processing Systems (NeurIPS)</li>
-                    <li>International Conference on Learning Representations (ICLR)</li>
-                    <li>International Conference on Machine Learning (ICML)</li>
-                    <li>International Joint Conference on Artificial Intelligence (IJCAI)</li>
-                    <li>The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD)</li>
-                    <li>The European Conference on Artificial Intelligence (ECAI)</li>
-                </ul>
-
-                <b style="font-size: 20px;">Journal Reviewer</b>:
-                <ul>
-                    <li>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</li>
-                    <li>IEEE Transactions on Image Processing (TIP)</li>
-                    <li>IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</li>
-                    <li>Machine Learning</li>
-                </ul>
-
-            </div>
-
-            
-
-    </div>
-
-        
-    <br>
-    <br>
-    </body>
-
+<li>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</li>
+<li>IEEE Transactions on Image Processing (TIP)</li>
+<li>IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</li>
+<li>Machine Learning</li>
+</ul>
+</div>
+</div>
+<br/>
+<br/>
+</body>
 </html>
