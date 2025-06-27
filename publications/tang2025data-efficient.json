@@ -22,7 +22,8 @@
         },
         "links": {
             "paper": "https://www.sciencedirect.com/science/article/pii/S0031320324010562",
-            "code": "https://github.com/visresearch/dems"
+            "code": "https://github.com/visresearch/dems",
+            "model": "https://drive.google.com/drive/folders/14klxjyBhq-P_8QVB5oqEFOGsn6wYydnt"
         },
         "bibtex": "\n@article{tang2025data,\n    title={Data-Efficient Multi-Scale Fusion Vision Transformer}, \n    author={Tang, Hao and Liu, Dawei and Shen, Chengchao},\n    journal={Pattern Recognition},\n    volume = {161},\n    pages = {111305},\n    year={2025}\n}\n",
         "abstract": "Vision transformers (ViTs) excel in image classification with large datasets but struggle with smaller ones. Vanilla ViTs are single-scale, tokenizing images into patches with a single patch size. In this paper, we introduce multi-scale tokens, where multiple scales are achieved by splitting images into patches of varying sizes. Our model concatenates token sequences of multiple scales for attention, and a regional cross-scale interaction module fuses these tokens, improving data efficiency by learning local structures across scales. Additionally, we implement a data augmentation schedule to refine training. Extensive experiments on image classification demonstrate our approach surpasses DeiT by 6.6% on CIFAR100 and 3.2% on ImageNet1K.",

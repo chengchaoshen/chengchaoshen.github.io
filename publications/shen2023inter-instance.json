@@ -24,6 +24,7 @@
         "links": {
             "arxiv": "https://arxiv.org/abs/2306.12243",
             "code": "https://github.com/visresearch/patchmix",
+            "model": "https://csueducn-my.sharepoint.com/:f:/g/personal/221258_csu_edu_cn/EsSud0DB_edBiODrZhDbNpsBwfTbpOkuJ_TKA6mTYSi6Dw",
             "blog": "https://zhuanlan.zhihu.com/p/639240952"
         },
         "bibtex": "\n@article{shen2023inter,\n    author  = {Shen, Chengchao and Liu, Dawei and Tang, Hao and Qu, Zhe and Wang, Jianxin},\n    title   = {Inter-Instance Similarity Modeling for Contrastive Learning},\n    journal = {arXiv preprint arXiv:2306.12243},\n    year    = {2023},\n}\n",

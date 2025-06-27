@@ -45,6 +45,8 @@ def generate_publication_html(pub_data):
             links_html += f'[<a href="{links["arxiv"]}" target="_blank">arXiv</a>] '
         if links.get('code'):
             links_html += f'[<a href="{links["code"]}" target="_blank">code</a>] '
+        if links.get('model'):
+            links_html += f'[<a href="{links["model"]}" target="_blank">model</a>] '
         if links.get('blog'):
             links_html += f'[<a href="{links["blog"]}" target="_blank">blog</a>] '
         if links.get('supplementary'):
@@ -150,8 +152,9 @@ def convert_to_static_html(fname_template, fname_out):
     print(f"Successfully generated {fname_out}")
 
 if __name__ == '__main__':
-    # fname_template = 'index_dynamic.html'
-    # fname_out = 'index.html'
+    fname_template = 'index_dynamic.html'
+    fname_out = 'index.html'
+    convert_to_static_html(fname_template, fname_out) 
     fname_template = 'index_cn_dynamic.html'
     fname_out = 'index_cn.html'
     convert_to_static_html(fname_template, fname_out) 
