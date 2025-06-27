@@ -45,8 +45,8 @@ def generate_publication_html(pub_data):
             links_html += f'[<a href="{links["arxiv"]}" target="_blank">arXiv</a>] '
         if links.get('code'):
             links_html += f'[<a href="{links["code"]}" target="_blank">code</a>] '
-        if links.get('model'):
-            links_html += f'[<a href="{links["model"]}" target="_blank">model</a>] '
+        if links.get('weights'):
+            links_html += f'[<a href="{links["weights"]}" target="_blank">weights</a>] '
         if links.get('blog'):
             links_html += f'[<a href="{links["blog"]}" target="_blank">blog</a>] '
         if links.get('supplementary'):
