@@ -80,6 +80,58 @@
 </div>
 </div>
 <div id="publications-content">
+<div class="publication" data-area="efficiency llm">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/zhu2026high.png"/></div>
+<dt class="ptitle">HFPrune: High-Fidelity Pruning for Large Language Models</dt>
+<dd>Yiju Zhu, Jianxin Wang, <b class="me">Chengchao Shen*</b></dd>
+<dd>Arxiv, 2026</dd>
+<dd>
+                    [<a href="https://arxiv.org/abs/2603.08083" target="_blank">arXiv</a>] [<a href="https://github.com/visresearch/HFPrune" target="_blank">code</a>] [<a href="https://huggingface.co/visresearch/HFPrune-Llama-pruned/tree/main" target="_blank">weights</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@article{zhu2026high,
+    author  = {Zhu, Yijun and Wang, Jianxin and Shen, Chengchao},
+    title   = {High-Fidelity Pruning for Large Language Models},
+    journal = {arXiv preprint arXiv:2603.08083},
+    year    = {2026},
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>Large Language Models (LLMs) have demonstrated exceptional performance across a wide range of tasks, yet their significant computational and memory requirements present major challenges for deployment. A common approach uses Taylor expansion on the loss function to estimate neuron importance. However, its reliance on one-hot cross entropy loss, a key limitation is that it narrowly assesses importance based only on the probability assigned to the single predicted next token, thereby ignoring the other potential predictions of the original model. An intuitive solution to address this is to employ self distillation criterion for importance evaluation. However, this approach introduces significant computational overhead by requiring a separate teacher model for supervision. To this end, we propose a simple but effective criterion, information entropy of the model's output distribution, to efficiently evaluate importance scores of neurons with Taylor pruning without requirement of additional teacher. Compared to plain cross entropy criterion, it provides a more holistic criterion for Taylor pruning to prune neurons with the least impact on the prediction of model in a global manner, thereby preserving the fidelity of the model's predictive capabilities. Experimental results on extensive zero-shot benchmarks demonstrate that our method consistently outperforms existing pruning methods across the LLaMA and Qwen series models.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/visresearch/HFPrune.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
+<div class="publication" data-area="efficiency multimodal">
+<dl class="description">
+<div class="figure"><img class="paper-image" src="images/shen2026adaptive.png"/></div>
+<dt class="ptitle">Adaptive MLP Pruning for Large Vision Transformers</dt>
+<dd><b class="me">Chengchao Shen*</b></dd>
+<dd>Arxiv, 2026</dd>
+<dd>
+                    [<a href="https://arxiv.org/abs/2603.08100" target="_blank">arXiv</a>] [<a href="https://github.com/visresearch/AMP" target="_blank">code</a>] [<a href="https://huggingface.co/visresearch/AMR/tree/main" target="_blank">weights</a>] 
+                    
+            <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@article{shen2026adaptive,
+    author  = {Shen, Chengchao},
+    title   = {Adaptive MLP Pruning for Large Vision Transformers},
+    journal = {arXiv preprint arXiv:2603.08100},
+    year    = {2026},
+}</pre>
+</div>
+<div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
+                <div class="abstract" style="overflow: hidden; display: none;">
+<p>Large vision transformers present impressive scalability, as their performance can be well improved with increased model capacity. Nevertheless, their cumbersome parameters results in exorbitant computational and memory demands. By analyzing prevalent transformer structures, we find that multilayer perceptron (MLP) modules constitute the largest share of the model's parameters. In this paper, we propose an Adaptive MLP Pruning (AMP) method to substantially reduce the parameters of large vision transformers without obvious performance degradation. First, we adopt Taylor based method to evaluate neuron importance of MLP. However, the importance computation using one-hot cross entropy loss ignores the potential predictions on other categories, thus degrading the quality of the evaluated importance scores. To address this issue, we introduce label-free information entropy criterion to fully model the predictions of the original model for more accurate importance evaluation. Second, we rank the hidden neurons of MLP by the above importance scores and apply binary search algorithm to adaptively prune the ranked neurons according to the redundancy of different MLP modules, thereby avoiding the predefined compression ratio. Experimental results on several state-of-the-art large vision transformers, including CLIP and DINOv2, demonstrate that our method achieves roughly 40% parameter and FLOPs reduction in a near lossless manner. Moreover, when the models are not finetuned after pruning, our method outperforms other pruning methods by significantly large margin.</p>
+</div>
+</div>
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/visresearch/AMP.svg?style=social&amp;label=Star" style="text-align:center;vertical-align:middle"/>
+</dd>
+</dl>
+</div>
 <div class="publication" data-area="efficiency multimodal distillation">
 <dl class="description">
 <div class="figure"><img class="paper-image" src="images/shen2025diversity.png"/></div>
@@ -188,21 +240,21 @@
 </div>
 <div class="publication" data-area="unsupervised">
 <dl class="description">
-<div class="figure"><img class="paper-image" src="images/shen2025multiple.png"/></div>
+<div class="figure"><img class="paper-image" src="images/shen2026multiple.png"/></div>
 <dt class="ptitle">Multiple Object Stitching for Unsupervised Representation Learning</dt>
 <dd><b class="me">Chengchao Shen</b>, Dawei Liu, Jianxin Wang</dd>
-<dd>Pattern Recognition, 2025</dd>
+<dd>Pattern Recognition, 2026</dd>
 <dd>
                     [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0031320325012658" target="_blank">paper</a>] [<a href="https://arxiv.org/abs/2506.07364" target="_blank">arXiv</a>] [<a href="https://github.com/visresearch/MultipleObjectStitching" target="_blank">code</a>] [<a href="https://csueducn-my.sharepoint.com/:f:/g/personal/221258_csu_edu_cn/Eo_AYSC_1cJHvscy_EgnFyYBI1to9hV2LE1zSZjpMTMjXQ?e=8JOPjK" target="_blank">weights</a>] 
                     
             <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">bibtex</a>]
-                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@article{shen2025multiple,
+                <pre class="bibref" style="overflow: hidden; display: none; margin: 0; padding: 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">@article{shen2026multiple,
     title={Multiple Object Stitching for Unsupervised Representation Learning},
     author={Shen, Chengchao and Liu, Dawei and Wang Jianxin},
     journal = {Pattern Recognition},
     volume = {172},
     pages = {112602},
-    year={2025}
+    year={2026}
 }</pre>
 </div>
 <div class="link2">[<a class="fakelink" onclick="$(this).siblings('.abstract').slideToggle()">abstract</a>]
