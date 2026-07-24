@@ -105,7 +105,7 @@ def convert_to_static_html(fname_template, fname_out):
         "zhu2026high.json", "shen2026adaptive.json", 
         "shen2025diversity-guided.json", "zhu2025sdmprune.json", "tang2025learning.json",
         "tang2025data-efficient.json", "shen2026multiple.json", "shen2025multi-grained.json",
-        "shen2025asymmetric.json", "shen2023inter-instance.json", "sheng2023modeling.json",
+        "shen2025asymmetric.json", "shen2026inter-instance.json", "sheng2023modeling.json",
         "shen2021training.json", "shen2021progressive.json", "shen2019customizing.json",
         "shen2019amalgamating.json", "shen2018intra-class.json", "song2018selective.json",
         "song2018transductive.json", "fang2021contrastive.json", "fang2021mosaicking.json",
