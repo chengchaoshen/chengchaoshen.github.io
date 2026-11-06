@@ -47,6 +47,14 @@ def generate_publication_html(pub_data):
             links_html += f'[<a href="{links["code"]}" target="_blank">code</a>] '
         if links.get('weights'):
             links_html += f'[<a href="{links["weights"]}" target="_blank">weights</a>] '
+        if links.get('weight1'):
+            links_html += f'[<a href="{links["weight1"]}" target="_blank">weight1</a>] '
+        if links.get('dataset1'):
+            links_html += f'[<a href="{links["dataset1"]}" target="_blank">dataset1</a>] '
+        if links.get('weight2'):
+            links_html += f'[<a href="{links["weight2"]}" target="_blank">weight2</a>] '
+        if links.get('dataset2'):
+            links_html += f'[<a href="{links["dataset2"]}" target="_blank">dataset2</a>] '
         if links.get('blog'):
             links_html += f'[<a href="{links["blog"]}" target="_blank">blog</a>] '
         if links.get('supplementary'):
